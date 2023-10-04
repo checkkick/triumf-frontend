@@ -1,18 +1,31 @@
 @import '@/styles';
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+body,
+html {
+   box-sizing: border-box;
+   font-family: "HalvarBreit", sans-serif, serif;
+   background-color: $main-white;
+   margin: 0;
+   padding: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+*,
+*::before,
+*::after {
+   scroll-behavior: smooth;
+   box-sizing: inherit;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+   padding: 0 100px;
+   max-width: 1440px;
+   margin: 0 auto;
+
+   @media (max-width: 1150px) {
+      padding: 0 50px;
+   }
+
+   @media (max-width: 750px) {
+      padding: 0 15px;
+   }
 }

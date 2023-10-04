@@ -1,0 +1,8 @@
+@mixin defineFontHalvarBreit($weight, $size, $lh) {
+   font-family: "HalvarBreit", sans-serif;
+   font-weight: $weight;
+   font-size: $size;
+   line-height: $lh;
+   margin: 0;
+   color: $text-white;
+}
