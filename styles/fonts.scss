@@ -1,0 +1,53 @@
+@font-face {
+   font-family: "HalvarBreit";
+   src: local("HalvarBreit-Thin"), url("../assets/fonts/HalvarBreit-Th.woff2") format("woff2"),
+      url("../assets/fonts/HalvarBreit-Th.woff") format("woff");
+   font-display: swap;
+   font-weight: 100;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "HalvarBreit";
+   src: local("HalvarBreit-Light"), url("../assets/fonts/HalvarBreit-Lt.woff2") format("woff2"),
+      url("../assets/fonts/HalvarBreit-Lt.woff") format("woff");
+   font-display: swap;
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "HalvarBreit";
+   src: local("HalvarBreit-Regular"), url("../assets/fonts/HalvarBreit-Rg.woff2") format("woff2"),
+      url("../assets/fonts/HalvarBreit-Rg.woff") format("woff");
+   font-display: swap;
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "HalvarBreit";
+   src: local("HalvarBreit-Medium"), url("../assets/fonts/HalvarBreit-Md.woff2") format("woff2"),
+      url("../assets/fonts/HalvarBreit-Md.woff") format("woff");
+   font-display: swap;
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "HalvarBreit";
+   src: local("HalvarBreit-Bold"), url("../assets/fonts/HalvarBreit-Bd.woff2") format("woff2"),
+      url("../assets/fonts/HalvarBreit-Bd.woff") format("woff");
+   font-display: swap;
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "HalvarBreit";
+   src: local("HalvarBreit-ExtraBold"), url("../assets/fonts/HalvarBreit-XBd.woff2") format("woff2"),
+      url("../assets/fonts/HalvarBreit-XBd.woff") format("woff");
+   font-display: swap;
+   font-weight: 800;
+   font-style: normal;
+}
