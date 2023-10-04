@@ -1,0 +1,42 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.wrapper {
+   position: relative;
+   background-color: $main-black;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.title {
+   @include defineFontHalvarBreit(800, 150px, normal);
+   margin-bottom: 8px;
+   color: $title-white;
+}
+
+.subtitle {
+   @include defineFontHalvarBreit(300, 64px, normal);
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   margin-bottom: 29px;
+   color: $title-white;
+}
+
+.btn {
+   @include defineFontHalvarBreit(300, 16px, normal);
+   color: $white;
+   outline: none;
+   border: 1px solid $white;
+   border-radius: 30px;
+   padding: 20px 42px;
+   background-color: transparent;
+   cursor: pointer;
+   transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out;
+
+   &:hover {
+      background-color: $gray;
+      color: $main-black;
+   }
+}
