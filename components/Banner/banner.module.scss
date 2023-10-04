@@ -2,22 +2,30 @@
 @import '@/styles/variables.scss';
 
 .wrapper {
-   position: relative;
    background-color: $main-black;
+}
+
+.content {
    height: 100vh;
+   position: relative;
    display: flex;
    flex-direction: column;
    align-items: flex-start;
    justify-content: center;
+   background: url('../../assets/images/banner-logo.svg') no-repeat center right;
 }
 
 .title {
+   position: relative;
+   z-index: 1;
    @include defineFontHalvarBreit(800, 150px, normal);
    margin-bottom: 8px;
    color: $title-white;
 }
 
 .subtitle {
+   position: relative;
+   z-index: 1;
    @include defineFontHalvarBreit(300, 64px, normal);
    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    margin-bottom: 29px;
@@ -25,6 +33,8 @@
 }
 
 .btn {
+   position: relative;
+   z-index: 1;
    @include defineFontHalvarBreit(300, 16px, normal);
    color: $white;
    outline: none;
