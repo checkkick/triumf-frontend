@@ -1,0 +1,81 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.wrapper {
+   position: sticky;
+   background-color: $main-black;
+   color: $text-white;
+}
+
+.list {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 40px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.logo {
+   @include defineFontHalvarBreit(300, 16px, normal);
+   text-decoration: none;
+
+
+   & svg path {
+      transition: 0.2s fill ease-in-out;
+   }
+
+   &:hover svg path {
+      fill: $white;
+   }
+}
+
+.navList {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.navLink {
+   @include defineFontHalvarBreit(300, 16px, normal);
+   text-decoration: none;
+   position: relative;
+   transition: 0.2s color ease-in-out;
+
+   &:hover {
+      color: $white;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 1px;
+      left: 50%;
+      bottom: -2px;
+      background-color: $white;
+      transition: width ease-in-out .2s, left ease-in-out .2s;
+   }
+
+   &:hover::after {
+      width: 100%;
+      left: 0;
+   }
+}
+
+.profile {
+   @include defineFontHalvarBreit(300, 16px, normal);
+   text-decoration: none;
+
+   & svg path {
+      transition: 0.2s stroke ease-in-out;
+   }
+
+   &:hover svg path {
+      stroke: $white;
+   }
+}
