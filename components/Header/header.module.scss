@@ -2,9 +2,14 @@
 @import '@/styles/variables.scss';
 
 .wrapper {
-   position: sticky;
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
    background-color: $main-black;
    color: $text-white;
+   padding: 8px 0;
 }
 
 .list {
