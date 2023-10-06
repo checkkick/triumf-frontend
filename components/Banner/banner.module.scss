@@ -2,7 +2,7 @@
 @import '@/styles/variables.scss';
 
 .wrapper {
-   // background-color: $main-black;
+   background-color: transparent;
 }
 
 .content {
@@ -16,36 +16,47 @@
 
 .title {
    position: relative;
-   z-index: 1;
-   @include defineFontHalvarBreit(800, 150px, normal);
-   margin-bottom: 8px;
-   color: $title-white;
+   @include defineFontHalvarBreit(700, 12.5rem);
+   color: $text-white;
 }
 
 .subtitle {
    position: relative;
-   z-index: 1;
-   @include defineFontHalvarBreit(300, 64px, normal);
-   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-   margin-bottom: 29px;
-   color: $title-white;
+   @include defineFontHalvarBreit(300, 2rem);
+   margin-bottom: 2.3rem;
+   color: $text-white;
 }
 
-.btn {
-   position: relative;
-   z-index: 1;
-   @include defineFontHalvarBreit(300, 16px, normal);
-   color: $white;
-   outline: none;
-   border: 1px solid $white;
-   border-radius: 30px;
-   padding: 20px 42px;
-   background-color: transparent;
-   cursor: pointer;
-   transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out;
+.btnRow {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
 
-   &:hover {
-      background-color: $gray;
-      color: $main-black;
-   }
+.btnContact {
+   position: relative;
+   @include defineFontHalvarBreit(300, 1.25rem);
+   display: flex;
+   align-items: center;
+   color: $main-black;
+   outline: none;
+   border: 1px solid $text-white;
+   border-radius: 0.875rem;
+   background: url('~/assets/images/arrow-right-black.svg') no-repeat calc(100% - 1.5rem) center, $text-white;
+   padding: 1.2rem 4.5rem 1.2rem 1.5rem;
+   cursor: pointer;
+}
+
+.btnAbout {
+   position: relative;
+   @include defineFontHalvarBreit(300, 1.25rem);
+   display: flex;
+   align-items: center;
+   color: $text-white;
+   outline: none;
+   border: 1px solid $text-white;
+   border-radius: 0.875rem;
+   background: url('~/assets/images/arrow-right-white.svg') no-repeat calc(100% - 1.5rem) center, transparent;
+   padding: 1.2rem 4.5rem 1.2rem 1.5rem;
+   cursor: pointer;
 }
