@@ -2,8 +2,6 @@
 
 .wrapper {
    background-color: rgba($text-white, 0.9);
-   ;
-   padding: 8rem 0;
 }
 
 .content {
@@ -11,4 +9,5 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 5.5rem;
+   padding: 8rem 0;
 }

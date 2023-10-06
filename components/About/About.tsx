@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './about.module.scss';
 import { AboutItem } from './AboutItem';
+import { AboutBanner } from './AboutBanner';
 
 export function About() {
   const AboutList = [
@@ -23,6 +24,8 @@ export function About() {
       <div className="container">
         <div className={styles.content}>
           {AboutList.map((item, index) => <AboutItem key={index} index={index} title={item.title} text={item.text} />)}
+
+          <AboutBanner />
         </div>
       </div>
     </section>
