@@ -4,9 +4,20 @@ body,
 html {
    box-sizing: border-box;
    font-family: "HalvarBreit", sans-serif, serif;
-   background-color: $main-white;
    margin: 0;
    padding: 0;
+}
+
+html {
+   background-color: $main-black;
+   background-image: url('~/assets/images/banner-logo.svg');
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-attachment: fixed;
+   -webkit-background-size: contain;
+   -moz-background-size: contain;
+   -o-background-size: contain;
+   background-size: contain;
 }
 
 *,
