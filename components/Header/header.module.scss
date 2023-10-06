@@ -50,6 +50,7 @@
    text-decoration: none;
    position: relative;
    transition: 0.2s color ease-in-out;
+   color: $text-white;
 
    &:hover {
       color: $white;
