@@ -18,6 +18,7 @@
    margin-bottom: 0.87rem;
 
    &::after {
+      z-index: -1;
       content: '';
       position: absolute;
       left: 0;

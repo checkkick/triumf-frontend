@@ -1,4 +1,22 @@
-<svg width="64" height="51" viewBox="0 0 64 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="17" width="43" height="34" fill="#A7B5BD" fill-opacity="0.4"/>
-<rect x="43" width="21" height="17" fill="#A7B5BD" fill-opacity="0.4"/>
+<svg
+   width="64"
+   height="51"
+   viewBox="0 0 64 51"
+   fill="none"
+   xmlns="http://www.w3.org/2000/svg"
+>
+   <rect
+      y="17"
+      width="43"
+      height="34"
+      fill="#A7B5BD"
+      fill-opacity="0.6"
+   />
+   <rect
+      x="43"
+      width="21"
+      height="17"
+      fill="#A7B5BD"
+      fill-opacity="0.6"
+   />
 </svg>
