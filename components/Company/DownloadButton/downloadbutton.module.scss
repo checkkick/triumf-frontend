@@ -1,0 +1,17 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.btn {
+   cursor: pointer;
+   outline: none;
+   border: none;
+   background: transparent;
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+}
+
+.btnText {
+   @include defineFontHalvarBreit(300, 1.25rem);
+   color: $white;
+}

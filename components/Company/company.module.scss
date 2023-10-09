@@ -1,0 +1,50 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.wrapper {
+   padding-top: 20.5rem;
+   margin-bottom: 8.25rem;
+}
+
+.about {
+   background: url('~/assets/images/company-background.png') no-repeat center right / 70% 100%;
+}
+
+.title {
+   max-width: 55%;
+   position: relative;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $white;
+   margin-bottom: 0.87rem;
+
+   &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -2.3rem;
+      width: 65px;
+      height: 51px;
+      background: url('~/assets/images/cubes-left.svg') no-repeat center center;
+   }
+}
+
+.subtitle {
+   max-width: 55%;
+   @include defineFontHalvarBreit(700, 2.5rem);
+   color: $text-white;
+   margin-bottom: 1.75rem;
+}
+
+.text {
+   max-width: 55%;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $text-white;
+   margin-bottom: 1.12rem;
+}
+
+.subtext {
+   max-width: 55%;
+   @include defineFontHalvarBreit(300, 1.25rem);
+   color: $text-white;
+   margin-bottom: 1.4rem;
+}
