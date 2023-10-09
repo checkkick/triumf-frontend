@@ -5,6 +5,7 @@ import { About } from '@/components/About'
 import { Company } from '@/components/Company'
 import { Equipment } from '@/components/Equipment'
 import { Partners } from '@/components/Partners'
+import { Vendors } from '@/components/Vendors'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Company />
       <Equipment />
       <Partners />
+      <Vendors />
     </main>
   )
 }

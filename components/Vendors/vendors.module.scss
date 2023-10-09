@@ -1,0 +1,72 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.wrapper {
+   background-color: rgba($gray, 0.9);
+}
+
+.content {
+   position: relative;
+   padding: 5.5rem 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   // background: url('~/assets/images/vendors-bg.png') no-repeat left center / 70% 100%,
+   //    lightgray 50%;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+   }
+}
+
+.title {
+   z-index: 1;
+   position: relative;
+   text-align: right;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $main-black;
+   margin-bottom: 0.87rem;
+
+   &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -2.3rem;
+      width: 65px;
+      height: 51px;
+      background: url('~/assets/images/cubes-right-black.svg') no-repeat center center;
+   }
+}
+
+.subtitle {
+   z-index: 1;
+   max-width: 70%;
+   text-align: right;
+   @include defineFontHalvarBreit(700, 2.5rem);
+   color: $main-black;
+   margin-bottom: 1.7rem;
+}
+
+.text {
+   z-index: 1;
+   max-width: 90%;
+   align-self: stretch;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $black;
+}
+
+.list {
+   position: absolute;
+   top: 93%;
+   right: 0;
+   left: 0;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5rem;
+}
