@@ -1,0 +1,82 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.wrapper {
+   margin-bottom: 8.25rem;
+   float: right;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.title {
+   display: block;
+   position: relative;
+   text-align: right;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $white;
+   margin-bottom: 0.87rem;
+
+   &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -2.3rem;
+      width: 65px;
+      height: 51px;
+      background: url('~/assets/images/cubes-right.svg') no-repeat center center;
+   }
+}
+
+.subtitle {
+   display: block;
+   max-width: 55%;
+   text-align: right;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $text-white;
+   margin-bottom: 4.2rem;
+}
+
+.list {
+   align-self: stretch;
+   width: 100%;
+   margin: 0 0 3rem 0;
+   padding: 0;
+   list-style: none;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
+}
+
+.btn {
+   align-self: center;
+   cursor: pointer;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   border: none;
+   outline: none;
+   background: transparent;
+}
+
+.btnText {
+   @include defineFontHalvarBreit(400, 1.25rem);
+   color: $white;
+}
+
+.circle {
+   width: 2.5rem;
+   height: 2.5rem;
+   background-color: $gray;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

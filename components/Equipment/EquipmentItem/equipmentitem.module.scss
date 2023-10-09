@@ -1,0 +1,33 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.item {
+   position: relative;
+   display: grid;
+   align-items: center;
+   grid-template-rows: repeat(2, 1fr);
+   gap: 0.5rem;
+   padding: 1rem 2rem 1.3rem;
+
+   &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+      background-color: $text-white;
+      border-radius: 17px;
+   }
+}
+
+.image {
+   width: 100%;
+   scale: 1.2;
+}
+
+.title {
+   @include defineFontHalvarBreit(400, 1.25rem);
+   text-align: center;
+}
