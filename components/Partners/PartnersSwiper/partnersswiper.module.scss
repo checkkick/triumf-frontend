@@ -34,8 +34,9 @@
 
 .slide {
    height: 13.75rem;
-   background-color: rgba($text-white, 0.9);
+   background-color: $text-white;
    background-position: center center;
+   background-size: auto 80%;
    background-repeat: no-repeat;
    border-radius: 15px;
    display: flex;

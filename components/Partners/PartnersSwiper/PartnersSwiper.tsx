@@ -43,7 +43,7 @@ export function PartnersSwiper() {
       navigation
       loop
       className={styles.swiper}
-      spaceBetween={50}
+      spaceBetween={35}
       slidesPerView={3}
       autoplay={{
         delay: 4000,
