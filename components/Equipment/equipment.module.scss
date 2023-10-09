@@ -2,8 +2,7 @@
 @import '@/styles/variables.scss';
 
 .wrapper {
-   margin-bottom: 8.25rem;
-   float: right;
+   margin-bottom: 5.5rem;
 }
 
 .content {
@@ -13,7 +12,6 @@
 }
 
 .title {
-   display: block;
    position: relative;
    text-align: right;
    @include defineFontHalvarBreit(400, 1.5rem);
@@ -33,7 +31,6 @@
 }
 
 .subtitle {
-   display: block;
    max-width: 55%;
    text-align: right;
    @include defineFontHalvarBreit(400, 1.5rem);
@@ -44,7 +41,7 @@
 .list {
    align-self: stretch;
    width: 100%;
-   margin: 0 0 3rem 0;
+   margin: 0 0 1rem 0;
    padding: 0;
    list-style: none;
    display: grid;

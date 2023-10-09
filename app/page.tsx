@@ -4,6 +4,7 @@ import { Banner } from '@/components/Banner'
 import { About } from '@/components/About'
 import { Company } from '@/components/Company'
 import { Equipment } from '@/components/Equipment'
+import { Partners } from '@/components/Partners'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Company />
       <Equipment />
+      <Partners />
     </main>
   )
 }

@@ -1,0 +1,46 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.wrapper {
+   margin-bottom: 6.3rem;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+}
+
+.title {
+   position: relative;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $white;
+   margin-bottom: 0.87rem;
+
+   &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -2.3rem;
+      width: 65px;
+      height: 51px;
+      background: url('~/assets/images/cubes-left.svg') no-repeat center center;
+   }
+}
+
+.subtitle {
+   max-width: 55%;
+   @include defineFontHalvarBreit(700, 2.5rem);
+   color: $text-white;
+   margin-bottom: 1.6rem;
+}
+
+.text {
+   position: relative;
+   max-width: 55%;
+   align-self: flex-end;
+   text-align: right;
+   @include defineFontHalvarBreit(400, 1.5rem);
+   color: $text-white;
+   margin-bottom: 3.5rem;
+}

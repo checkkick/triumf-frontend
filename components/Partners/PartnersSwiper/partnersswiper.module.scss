@@ -1,0 +1,44 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.swiper {
+   width: 100%;
+   padding: 0 2rem;
+
+   :global(.swiper-button-prev) {
+      width: 42px;
+      height: 42px;
+      border-radius: 5px;
+      background-color: rgba($black, 0.8);
+      left: 0;
+
+      &::after {
+         color: $gray;
+         font-size: 24px;
+      }
+   }
+
+   :global(.swiper-button-next) {
+      width: 42px;
+      height: 42px;
+      border-radius: 5px;
+      background-color: rgba($black, 0.8);
+      right: 0;
+
+      &::after {
+         color: $gray;
+         font-size: 24px;
+      }
+   }
+}
+
+.slide {
+   height: 13.75rem;
+   background-color: rgba($text-white, 0.9);
+   background-position: center center;
+   background-repeat: no-repeat;
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
