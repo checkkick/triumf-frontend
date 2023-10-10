@@ -25,7 +25,7 @@ export function Vendors() {
   ]
 
   return (
-    <section className={styles.wrapper} style={{ marginBottom: `${(example.length / 3) * 18}rem` }}>
+    <section className={styles.wrapper} style={{ marginBottom: `${Math.ceil(example.length / 3) * 18}rem` }}>
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ВЕНДОРЫ</h2>
