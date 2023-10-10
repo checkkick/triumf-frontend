@@ -7,6 +7,7 @@ import { Equipment } from '@/components/Equipment'
 import { Partners } from '@/components/Partners'
 import { Vendors } from '@/components/Vendors'
 import { News } from '@/components/News'
+import { Contacts } from '@/components/Contacts'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Partners />
       <Vendors />
       <News />
+      <Contacts />
     </main>
   )
 }
