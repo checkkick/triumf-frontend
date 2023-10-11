@@ -2,6 +2,7 @@ import Header from '@/components/Header/Header'
 import './globals.scss'
 import type { Metadata } from 'next'
 import Footer from '@/components/Footer/Footer'
+import { LogoBackground } from '@/components/LogoBackground'
 
 export const metadata: Metadata = {
   title: 'Triumf',
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
+        <LogoBackground />
         <Header />
         {children}
         <Footer />

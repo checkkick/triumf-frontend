@@ -9,16 +9,9 @@ html {
    padding: 0;
 }
 
-html {
+body {
+   position: relative;
    background-color: $main-black;
-   background-image: url('~/assets/images/banner-logo.svg');
-   background-repeat: no-repeat;
-   background-position: calc(50% + 200px) 50%;
-   background-attachment: fixed;
-   -webkit-background-size: contain;
-   -moz-background-size: contain;
-   -o-background-size: contain;
-   background-size: contain;
 }
 
 *,
