@@ -45,14 +45,41 @@
 }
 
 .btn {
-   @include defineFontHalvarBreit(300, 1.25rem);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
    padding: 1.2rem 1rem;
    align-self: stretch;
-   color: $main-black;
-   width: 100%;
+   width: 25rem;
    border: none;
    outline: none;
    border-radius: 0.875rem;
    background: $text-white;
    cursor: pointer;
+
+   &:hover .btnText {
+      transform: translateX(-1rem);
+   }
+
+   &:hover .btnArrow {
+      opacity: 1;
+      transform: translateX(-1rem);
+   }
+}
+
+.btnText {
+   position: relative;
+   display: flex;
+   align-items: center;
+   @include defineFontHalvarBreit(300, 1.25rem);
+   color: $main-black;
+   transition: 0.2s transform ease-in-out;
+}
+
+.btnArrow {
+   position: absolute;
+   right: -3.4rem;
+   opacity: 0;
+   transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out;
 }

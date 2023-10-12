@@ -33,30 +33,49 @@
    gap: 1rem;
 }
 
-.btnContact {
+.btnContact,
+.btnAbout {
    position: relative;
-   @include defineFontHalvarBreit(300, 1.25rem);
    display: flex;
    align-items: center;
-   color: $main-black;
    outline: none;
    border: 1px solid $text-white;
    border-radius: 0.875rem;
-   background: url('~/assets/images/arrow-right-black.svg') no-repeat calc(100% - 1.5rem) center, $text-white;
-   padding: 1.2rem 4.5rem 1.2rem 1.5rem;
+   padding: 1.2rem 3.2rem;
    cursor: pointer;
+
+   &:hover .btnText {
+      transform: translateX(-1rem);
+   }
+
+   &:hover .btnArrow {
+      opacity: 1;
+      transform: translateX(-1rem);
+   }
+}
+
+.btnContact {
+   color: $main-black;
+   background-color: $text-white;
 }
 
 .btnAbout {
+   color: $text-white;
+   background: transparent;
+}
+
+.btnText {
    position: relative;
-   @include defineFontHalvarBreit(300, 1.25rem);
    display: flex;
    align-items: center;
-   color: $text-white;
-   outline: none;
-   border: 1px solid $text-white;
-   border-radius: 0.875rem;
-   background: url('~/assets/images/arrow-right-white.svg') no-repeat calc(100% - 1.5rem) center, transparent;
-   padding: 1.2rem 4.5rem 1.2rem 1.5rem;
-   cursor: pointer;
+   @include defineFontHalvarBreit(300, 1.25rem);
+   color: inherit;
+   transition: 0.2s transform ease-in-out;
+}
+
+.btnArrow {
+   position: absolute;
+   right: -3.5rem;
+   opacity: 0;
+   transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out;
 }

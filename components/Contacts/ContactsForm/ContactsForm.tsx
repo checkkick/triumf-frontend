@@ -46,7 +46,16 @@ export function ContactsForm() {
           <label className={styles.label}>Наш email</label>
           <input className={styles.input} value={'hi@triumf.it'} disabled />
         </div>
-        <button className={styles.btn} type="submit">Отправить</button>
+        <button className={styles.btn} type="submit">
+          <p className={styles.btnText}>
+            Отправить
+            <svg className={styles.btnArrow} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="si:Arrow_right">
+                <path id="v" d="M23.3333 26.6667L30 20M30 20L23.3333 13.3333M30 20H10" stroke="#21242C" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+              </g>
+            </svg>
+          </p>
+        </button>
       </div>
     </form>
   );
