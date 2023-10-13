@@ -2,17 +2,28 @@
 @import '@/styles/mixins.scss';
 
 .wrapper {
-   background-color: rgba($gray, 0.9);
+   position: relative;
+   background-color: $gray;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: url('~/assets/images/vendors-background.png') 50% / cover no-repeat,
+         radial-gradient(47.81% 81.65% at 47.76% 18.38%, rgba(217, 217, 217, 0.00) 0%, rgba(217, 217, 217, 0.45) 50.18%, #D9D9D9 100%);
+   }
 }
 
 .content {
+   z-index: 1;
    position: relative;
    padding: 5.5rem 0;
    display: flex;
    flex-direction: column;
    align-items: flex-end;
-   // background: url('~/assets/images/vendors-bg.png') no-repeat left center / 70% 100%,
-   //    lightgray 50%;
 
    &::after {
       content: '';

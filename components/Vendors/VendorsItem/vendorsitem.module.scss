@@ -1,6 +1,7 @@
 @import '@/styles/variables.scss';
 
 .block {
+   max-height: 15rem;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -11,5 +12,5 @@
 }
 
 .image {
-   width: 100%;
+   max-width: 100%;
 }
