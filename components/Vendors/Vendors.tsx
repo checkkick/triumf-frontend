@@ -5,22 +5,22 @@ import { VendorsItem } from './VendorsItem';
 export function Vendors() {
   const example = [
     {
-      image: '/vendors-1.png'
+      image: '/vendors-1.svg'
     },
     {
-      image: '/vendors-2.png'
+      image: '/vendors-2.svg'
     },
     {
-      image: '/vendors-3.png'
+      image: '/vendors-3.svg'
     },
     {
-      image: '/vendors-1.png'
+      image: '/vendors-1.svg'
     },
     {
-      image: '/vendors-2.png'
+      image: '/vendors-2.svg'
     },
     {
-      image: '/vendors-3.png'
+      image: '/vendors-3.svg'
     },
   ]
 
