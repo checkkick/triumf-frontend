@@ -13,6 +13,10 @@
    gap: 1.5rem;
 
    &:hover {
+      & .btnText::after {
+         opacity: 1;
+      }
+
       & .circle {
          animation-duration: 0.5s;
          animation-name: bubbleCircle;
@@ -26,8 +30,22 @@
 }
 
 .btnText {
+   display: block;
+   position: relative;
    @include defineFontHalvarBreit(300, 1.25rem);
    color: $white;
+
+   &::after {
+      content: '';
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $white;
+      transition: 0.2s opacity ease-in-out;
+   }
 }
 
 .circle {
