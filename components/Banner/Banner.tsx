@@ -8,7 +8,7 @@ export function Banner() {
           <h1 className={styles.title}>TRIUMF</h1>
           <h2 className={styles.subtitle}>Ваша возможность сделать свой бизнес высокотехнологичным</h2>
           <div className={styles.btnRow}>
-            <button className={styles.btnContact}>
+            <a className={styles.btnContact} href='#contacts'>
               <p className={styles.btnText}>
                 Связаться с нами
                 <svg className={styles.btnArrow} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,8 +17,8 @@ export function Banner() {
                   </g>
                 </svg>
               </p>
-            </button>
-            <button className={styles.btnAbout}>
+            </a>
+            <a className={styles.btnAbout} href='#company'>
               <p className={styles.btnText}>
                 О компании
                 <svg className={styles.btnArrow} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@ export function Banner() {
                   </g>
                 </svg>
               </p>
-            </button>
+            </a>
           </div>
         </div>
       </div>

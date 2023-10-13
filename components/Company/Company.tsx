@@ -6,7 +6,7 @@ export function Company() {
   return (
     <section className={styles.wrapper}>
       <div className="container">
-        <div className={styles.about}>
+        <div id='company' className={styles.about}>
           <h2 className={styles.title}>КОМПАНИЯ</h2>
           <h3 className={styles.subtitle}>Комплексные поставки IT-оборудования напрямую от производителей</h3>
           <p className={styles.text}>
