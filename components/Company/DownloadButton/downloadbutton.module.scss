@@ -11,9 +11,80 @@
    display: flex;
    align-items: center;
    gap: 1.5rem;
+
+   &:hover {
+      & .circle {
+         animation-duration: 0.5s;
+         animation-name: bubbleCircle;
+      }
+
+      & .circle::after {
+         animation-duration: 0.8s;
+         animation-name: bubbleBorder;
+      }
+   }
 }
 
 .btnText {
    @include defineFontHalvarBreit(300, 1.25rem);
    color: $white;
+}
+
+.circle {
+   position: relative;
+   width: 2.5rem;
+   height: 2.5rem;
+   background-color: $gray;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &::after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: -0.8rem;
+      bottom: -0.8rem;
+      right: -0.8rem;
+      left: -0.8rem;
+      border: 2px solid $gray;
+      border-radius: 50%;
+   }
+}
+
+@keyframes bubbleBorder {
+   0% {
+      transform: scale(1);
+   }
+
+   30% {
+      transform: scale(0);
+   }
+
+   70% {
+      transform: scale(1.1);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+@keyframes bubbleCircle {
+   0% {
+      transform: scale(1);
+   }
+
+   30% {
+      transform: scale(0);
+   }
+
+   80% {
+      transform: scale(1.1);
+   }
+
+   100% {
+      transform: scale(1);
+   }
 }
