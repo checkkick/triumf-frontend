@@ -4,12 +4,16 @@ import styles from './newsitem.module.scss';
 interface INewsItem {
   bgImage: string
   title: string
+  text: string
 }
 
-export function NewsItem({ bgImage, title }: INewsItem) {
+export function NewsItem({ bgImage, title, text }: INewsItem) {
   return (
     <a href='#' className={styles.card} style={{ backgroundImage: `url(${bgImage})` }}>
-      <h5 className={styles.title}>{title}</h5>
+      <div className={styles.content}>
+        <h5 className={styles.title}>{title}</h5>
+        <p className={styles.text}>{text}</p>
+      </div>
 
       <span className={styles.logo}>
         <svg width="59" height="55" viewBox="0 0 59 55" fill="none" xmlns="http://www.w3.org/2000/svg">
