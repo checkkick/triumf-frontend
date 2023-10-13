@@ -1,6 +1,7 @@
 @import '@/styles/variables.scss';
 
 .wrapper {
+   position: relative;
    background-color: rgba($text-white, 0.9);
 }
 
@@ -10,4 +11,12 @@
    grid-template-columns: repeat(3, 1fr);
    gap: 5.5rem;
    padding: 8rem 0;
+}
+
+.anchor {
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
 }

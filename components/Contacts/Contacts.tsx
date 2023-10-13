@@ -5,7 +5,8 @@ import { ContactsForm } from './ContactsForm';
 
 export function Contacts() {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
+      <div id='contacts' className={styles.anchor}></div>
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.content}>
@@ -20,6 +21,6 @@ export function Contacts() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -48,7 +48,7 @@
    position: relative;
    @include defineFontHalvarBreit(400, 1.5rem);
    color: $text-white;
-   margin-bottom: 7.8rem;
+   margin-bottom: 4rem;
 
    &::after {
       z-index: -1;
@@ -76,4 +76,12 @@
 .qrImage {
    max-width: 9rem;
    max-height: 9rem;
+}
+
+.anchor {
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
 }

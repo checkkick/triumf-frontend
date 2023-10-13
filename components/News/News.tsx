@@ -23,7 +23,7 @@ export function News() {
   ]
 
   return (
-    <div className={styles.wrapper}>
+    <div id='news' className={styles.wrapper}>
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>НОВОСТИ</h2>

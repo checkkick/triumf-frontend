@@ -4,7 +4,7 @@ import { PartnersSwiper } from './PartnersSwiper';
 
 export function Partners() {
   return (
-    <div className={styles.wrapper}>
+    <section id='partners' className={styles.wrapper}>
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ПАРТНЕРЫ</h2>
@@ -14,6 +14,6 @@ export function Partners() {
           <PartnersSwiper />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

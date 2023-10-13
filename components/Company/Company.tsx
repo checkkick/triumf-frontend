@@ -4,7 +4,7 @@ import { DownloadButton } from './DownloadButton';
 
 export function Company() {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className="container">
         <div className={styles.about}>
           <h2 className={styles.title}>КОМПАНИЯ</h2>
@@ -21,6 +21,6 @@ export function Company() {
           <DownloadButton />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

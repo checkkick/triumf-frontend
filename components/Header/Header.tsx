@@ -19,19 +19,19 @@ export default function Header() {
                   <nav className={styles.nav}>
                      <ul className={styles.navList}>
                         <li className={styles.navItem}>
-                           <a href="#" className={styles.navLink}>О нас</a>
+                           <a href="#about" className={styles.navLink}>О нас</a>
                         </li>
                         <li className={styles.navItem}>
-                           <a href="#" className={styles.navLink}>Оборудование</a>
+                           <a href="#equipment" className={styles.navLink}>Оборудование</a>
                         </li>
                         <li className={styles.navItem}>
-                           <a href="#" className={styles.navLink}>Партнеры</a>
+                           <a href="#partners" className={styles.navLink}>Партнеры</a>
                         </li>
                         <li className={styles.navItem}>
-                           <a href="#" className={styles.navLink}>Новости</a>
+                           <a href="#news" className={styles.navLink}>Новости</a>
                         </li>
                         <li className={styles.navItem}>
-                           <a href="#" className={styles.navLink}>Контакты</a>
+                           <a href="#contacts" className={styles.navLink}>Контакты</a>
                         </li>
                      </ul>
                   </nav>

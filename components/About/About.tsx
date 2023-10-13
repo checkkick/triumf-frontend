@@ -21,6 +21,7 @@ export function About() {
 
   return (
     <section className={styles.wrapper}>
+      <div className={styles.anchor} id='about'></div>
       <div className="container">
         <div className={styles.content}>
           {AboutList.map((item, index) => <AboutItem key={index} index={index} title={item.title} text={item.text} />)}

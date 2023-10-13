@@ -21,6 +21,13 @@ body {
    box-sizing: inherit;
 }
 
+:target:before {
+   content: "";
+   display: block;
+   height: 8rem;
+   margin: -8rem 0 0;
+}
+
 .container {
    padding: 0 150px;
    max-width: 1440px;

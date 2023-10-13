@@ -26,7 +26,7 @@ export function Equipment() {
   ]
 
   return (
-    <div className={styles.wrapper}>
+    <section id='equipment' className={styles.wrapper}>
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ОБОРУДОВАНИЕ</h2>
@@ -40,6 +40,6 @@ export function Equipment() {
           <ButtonMore />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
