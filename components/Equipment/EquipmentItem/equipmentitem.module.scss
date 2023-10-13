@@ -2,12 +2,12 @@
 @import '@/styles/variables.scss';
 
 .item {
+   cursor: pointer;
    position: relative;
    display: grid;
    align-items: center;
    grid-template-rows: repeat(2, 1fr);
    gap: 0.5rem;
-   padding: 1rem 2rem 1.3rem;
 
    &::after {
       z-index: -1;
@@ -17,18 +17,77 @@
       bottom: 2rem;
       left: 2rem;
       right: 2rem;
-      background-color: $text-white;
+      background: linear-gradient(180deg, $text-white, rgba(167, 181, 189, 0.50)) 0 var(--x, 0)/ 200% 200%;
       border-radius: 17px;
       box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+      transition: 0.5s ease-in-out;
+   }
+
+   &:hover {
+      &::after {
+         --x: 80%;
+      }
+
+      .image {
+         transform: translateY(-4rem);
+      }
+
+      .title {
+         transform: translateY(-8rem);
+      }
+
+      .price,
+      .text {
+         transform: translateY(0);
+         opacity: 1;
+      }
    }
 }
 
 .image {
    width: 100%;
-   scale: 1.2;
+   transform: scale(1.1);
+   transition: 0.2s transform ease-in-out
 }
 
 .title {
    @include defineFontHalvarBreit(400, 1.25rem);
    text-align: center;
+   transition: 0.2s transform ease-in-out;
+   padding: 0 3rem;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+
+.text {
+   padding: 0 3rem;
+   position: absolute;
+   @include defineFontHalvarBreit(300, 0.8rem);
+   text-align: center;
+   bottom: 5.5rem;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 6;
+   -webkit-box-orient: vertical;
+   transform: translateY(1rem);
+   opacity: 0;
+   transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out;
+}
+
+.price {
+   position: absolute;
+   @include defineFontHalvarBreit(400, 1rem);
+   text-align: center;
+   padding: 0.4rem 1.5rem;
+   border-radius: 1.7rem;
+   background: $gray;
+   bottom: 2.5rem;
+   right: 1rem;
+   transform: translateY(1rem);
+   opacity: 0;
+   transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out;
 }
