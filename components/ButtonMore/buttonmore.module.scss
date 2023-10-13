@@ -13,11 +13,27 @@
    border: none;
    outline: none;
    background: transparent;
+
+   &:hover {
+      & .btnText {
+         transform: translateY(2rem)
+      }
+
+      & .arrow {
+         transform: translateY(2rem);
+
+         & path {
+            fill: $main-white;
+         }
+      }
+   }
 }
 
 .btnText {
    @include defineFontHalvarBreit(400, 1.25rem);
    color: $white;
+   mix-blend-mode: difference;
+   transition: 0.2s transform ease-in-out;
 }
 
 .circle {
@@ -28,4 +44,12 @@
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.arrow {
+   transition: 0.2s transform ease-in-out;
+
+   & path {
+      transition: 0.2s fill ease-in-out;
+   }
 }
