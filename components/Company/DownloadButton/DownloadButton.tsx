@@ -4,12 +4,12 @@ import styles from './downloadbutton.module.scss';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 export function DownloadButton() {
-  const player = useRef<any>(null)
+  const player = useRef<Player>(null)
   const btn = useRef<HTMLButtonElement>(null)
 
   React.useEffect(() => {
-    btn.current?.addEventListener('mouseenter', () => player.current.play())
-    btn.current?.addEventListener('mouseleave', () => player.current.stop())
+    btn.current?.addEventListener('mouseenter', () => player.current?.play())
+    btn.current?.addEventListener('mouseleave', () => player.current?.stop())
   }, []);
 
   return (
