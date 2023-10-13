@@ -48,8 +48,10 @@
 
 .arrow {
    transition: 0.2s transform ease-in-out;
+   mix-blend-mode: difference;
 
    & path {
+      mix-blend-mode: difference;
       transition: 0.2s fill ease-in-out;
    }
 }
