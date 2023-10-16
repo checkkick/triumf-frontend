@@ -12,11 +12,11 @@ interface IEquipmentItem {
 
 export function EquipmentItem({ image, title, text, price }: IEquipmentItem) {
   return (
-    <li className={styles.item}>
+    <div className={styles.item}>
       <img className={styles.image} src={image} alt={title} />
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.text}>{text}</p>
       <p className={styles.price}>{price}</p>
-    </li>
+    </div>
   );
 }

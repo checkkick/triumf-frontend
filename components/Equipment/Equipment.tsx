@@ -1,7 +1,11 @@
+'use client'
 import React from 'react';
 import styles from './equipment.module.scss';
 import { EquipmentItem } from './EquipmentItem';
-import { ButtonMore } from '../ButtonMore';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Mousewheel } from 'swiper/modules';
+import 'swiper/scss';
 
 export function Equipment() {
   const exapmle = [
@@ -23,6 +27,18 @@ export function Equipment() {
       text: 'Новейший двухпроцессорный сервер, который занимает почетное место среди самых надежных серверов мира (x86)‡. Являясь новейшим структурным элементом в семействе Flex System, SN550 V2 оптимизирован для обеспечения высокой производительности, эффективности и безопасности.',
       price: '4 000 000 руб.'
     },
+    {
+      image: '/equipment-2.png',
+      title: 'TP-Link JetStream T1600G-52PS',
+      text: 'Новейший двухпроцессорный сервер, который занимает почетное место среди самых надежных серверов мира (x86)‡. Являясь новейшим структурным элементом в семействе Flex System, SN550 V2 оптимизирован для обеспечения высокой производительности, эффективности и безопасности.',
+      price: '2 000 000 руб.'
+    },
+    {
+      image: '/equipment-3.png',
+      title: 'Dell EMC Unity 350F',
+      text: 'Новейший двухпроцессорный сервер, который занимает почетное место среди самых надежных серверов мира (x86)‡. Являясь новейшим структурным элементом в семействе Flex System, SN550 V2 оптимизирован для обеспечения высокой производительности, эффективности и безопасности.',
+      price: '4 000 000 руб.'
+    },
   ]
 
   return (
@@ -31,13 +47,22 @@ export function Equipment() {
         <div className={styles.content}>
           <h2 className={styles.title}>ОБОРУДОВАНИЕ</h2>
           <h2 className={styles.subtitle}>Доставка оборудования в течение 24 часов</h2>
-
-          <ul className={styles.list}>
-            {exapmle.map((item, index) =>
-              <EquipmentItem image={item.image} title={item.title} text={item.text} price={item.price} key={index} />)}
-          </ul>
-
-          <ButtonMore />
+          <div className={styles.swiperBlock}>
+            <Swiper
+              className={styles.swiper}
+              modules={[FreeMode, Mousewheel]}
+              spaceBetween={25}
+              slidesPerView={3}
+              freeMode
+              mousewheel={{ releaseOnEdges: true, eventsTarget: '#equipment' }}
+            >
+              {exapmle.map((item, index) =>
+                <SwiperSlide className={styles.swiperSlide} key={index}>
+                  <EquipmentItem image={item.image} title={item.title} text={item.text} price={item.price} />
+                </SwiperSlide>
+              )}
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>
