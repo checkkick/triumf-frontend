@@ -10,7 +10,7 @@ export function LogoBackground() {
             autoplay
             loop
             src="/banner-logo.json"
-            style={{ height: '70rem', width: '70rem' }}
+            style={{ height: '60rem', width: '60rem' }}
          />
       </div>
    )
