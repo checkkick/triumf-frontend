@@ -10,8 +10,9 @@
    justify-content: center;
    padding: 4rem 1rem;
    border-radius: 5px;
-   background: $white;
+   background-color: $white;
    box-shadow: 10px 20px 20px 0px rgba($black, 0.35);
+   transition: 0.2s background-color ease-in-out;
 
    &::after {
       z-index: -1;
@@ -24,9 +25,12 @@
       bottom: 0;
       background: url('~/assets/images/icon.svg') no-repeat center / 100%;
       transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out;
+      transform: scale(0);
    }
 
    &:hover {
+      background-color: rgba($white, 0.87);
+
       &::after {
          transform: scale(2);
          opacity: 1;
