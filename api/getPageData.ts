@@ -21,13 +21,13 @@ async function getData() {
    })
 
    if (!res.ok) {
-      throw new Error('Failed to fetch data')
+      throw new Error('Failed to fetch data for page')
    }
 
    return await res.json()
 }
 
-export default async function getCompanyData() {
+export default async function getPageData() {
    const data: IPageData[] = await getData()
    const [pageData] = data
 

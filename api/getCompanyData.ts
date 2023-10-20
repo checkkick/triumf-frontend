@@ -34,7 +34,7 @@ async function getData() {
    })
 
    if (!res.ok) {
-      throw new Error('Failed to fetch data')
+      throw new Error('Failed to fetch data about company')
    }
 
    return await res.json()
