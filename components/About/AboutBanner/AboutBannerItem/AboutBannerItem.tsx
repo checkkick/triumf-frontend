@@ -1,12 +1,8 @@
 import React from 'react';
 import styles from './aboutbanneritem.module.scss';
+import { IOurSuperiority } from '@/api/getCompanyData';
 
-interface IAboutBannerItem {
-  title: string
-  text: string
-}
-
-export function AboutBannerItem({ title, text }: IAboutBannerItem) {
+export function AboutBannerItem({ title, text }: IOurSuperiority) {
   return (
     <div className={styles.advantages}>
       <h4 className={styles.title}>{title}</h4>
