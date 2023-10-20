@@ -3,7 +3,11 @@ import React from 'react';
 import styles from './contacts.module.scss';
 import { ContactsForm } from './ContactsForm';
 
-export function Contacts() {
+interface IContactsProps {
+  title: string
+}
+
+export function Contacts({ title }: IContactsProps) {
   return (
     <section className={styles.wrapper}>
       <div id='contacts' className={styles.anchor}></div>
@@ -15,7 +19,7 @@ export function Contacts() {
             <ContactsForm />
 
             <div className={styles.qr}>
-              <p className={styles.qrText}>Если у вас возникли вопросы, отсканируйте QR-код, чтобы обратиться в техподдержку</p>
+              <p className={styles.qrText}>{title}</p>
               <img className={styles.qrImage} src="/contacts-qr.png" alt="contacts qr" />
             </div>
           </div>

@@ -1,12 +1,17 @@
 import React from 'react';
 import styles from './banner.module.scss';
-export function Banner() {
+
+interface IBannerProps {
+  title: string
+}
+
+export function Banner({ title }: IBannerProps) {
   return (
     <section className={styles.wrapper}>
       <div className="container">
         <div className={styles.content}>
           <h1 className={styles.title}>TRIUMF</h1>
-          <h2 className={styles.subtitle}>Ваша возможность сделать свой бизнес высокотехнологичным</h2>
+          <h2 className={styles.subtitle}>{title}</h2>
           <div className={styles.btnRow}>
             <a className={styles.btnContact} href='#contacts'>
               <p className={styles.btnText}>

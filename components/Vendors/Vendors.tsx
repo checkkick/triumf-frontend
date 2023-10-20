@@ -2,7 +2,12 @@ import React from 'react';
 import styles from './vendors.module.scss';
 import { VendorsItem } from './VendorsItem';
 
-export function Vendors() {
+interface IVendorsProps {
+  title: string
+  description: string
+}
+
+export function Vendors({ title, description }: IVendorsProps) {
   const example = [
     {
       image: '/vendors-1.svg'
@@ -29,10 +34,8 @@ export function Vendors() {
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ВЕНДОРЫ</h2>
-          <h3 className={styles.subtitle}>Компания TRIUMF сотрудничает с ведущими иностранными компаниями, поставляющими инновации во все уголки Мира.</h3>
-          <p className={styles.text}>
-            Наши вендоры — это мировые компании и корпорации, лидирующие в разработке современных технологических решений информационной сферы.
-          </p>
+          <h3 className={styles.subtitle}>{title}</h3>
+          <p className={styles.text}>{description}</p>
 
           <div className={styles.list}>
             {example.map((item, index) => <VendorsItem key={index} image={item.image} />)}

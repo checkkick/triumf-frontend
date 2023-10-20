@@ -7,7 +7,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Mousewheel } from 'swiper/modules';
 import 'swiper/scss';
 
-export function Equipment() {
+interface IEquipmentProps {
+  title: string
+}
+
+export function Equipment({ title }: IEquipmentProps) {
   const exapmle = [
     {
       image: '/equipment-1.png',
@@ -46,7 +50,7 @@ export function Equipment() {
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ОБОРУДОВАНИЕ</h2>
-          <h2 className={styles.subtitle}>Доставка оборудования в течение 24 часов</h2>
+          <h2 className={styles.subtitle}>{title}</h2>
           <div className={styles.swiperBlock}>
             <Swiper
               className={styles.swiper}

@@ -2,23 +2,29 @@ import React from 'react';
 import styles from './company.module.scss';
 import { DownloadButton } from './DownloadButton';
 
-export function Company() {
+interface ICompanyProps {
+  title: string
+  description: string
+  presentationLink: string
+}
+
+export function Company({ title, description, presentationLink }: ICompanyProps) {
+  const [descriptionTop, descriptionBottom] = description.split('\n')
+
   return (
     <section className={styles.wrapper}>
       <div className="container">
         <div id='company' className={styles.about}>
           <h2 className={styles.title}>КОМПАНИЯ</h2>
-          <h3 className={styles.subtitle}>Комплексные поставки IT-оборудования напрямую от производителей</h3>
+          <h3 className={styles.subtitle}>{title}</h3>
           <p className={styles.text}>
-            Компания TRIUMF осуществляет комплексные поставки IT-оборудования на рынке IT-инфраструктуры
-            с 2015 года, все это время учитывая быстроразвивающийся IT-сектор и потребности клиентов.
+            {descriptionTop}
           </p>
           <p className={styles.subtext}>
-            Помимо оборудования TRIUMF предоставит для Ваc современный и безопасный софт, а также патчи и обновления,
-            которые будут поддерживать в актуальном и безопасном состоянии программное обеспечение.
+            {descriptionBottom}
           </p>
 
-          <DownloadButton />
+          <DownloadButton link={presentationLink} />
         </div>
       </div>
     </section>

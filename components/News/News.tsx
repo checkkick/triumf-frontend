@@ -3,7 +3,11 @@ import styles from './news.module.scss';
 import { NewsItem } from './NewsItem';
 import { ButtonMore } from '../ButtonMore';
 
-export function News() {
+interface INewsProps {
+  title: string
+}
+
+export function News({ title }: INewsProps) {
   const example = [
     {
       title: 'Российские компании взыскали с иностранных IT-вендоров 4,7 млрд рублей',
