@@ -1,36 +1,18 @@
 import React from 'react';
 import styles from './vendors.module.scss';
 import { VendorsItem } from './VendorsItem';
+import getVendorsData from '@/api/getVendorsData';
 
 interface IVendorsProps {
   title: string
   description: string
 }
 
-export function Vendors({ title, description }: IVendorsProps) {
-  const example = [
-    {
-      image: '/vendors-1.svg'
-    },
-    {
-      image: '/vendors-2.svg'
-    },
-    {
-      image: '/vendors-3.svg'
-    },
-    {
-      image: '/vendors-1.svg'
-    },
-    {
-      image: '/vendors-2.svg'
-    },
-    {
-      image: '/vendors-3.svg'
-    },
-  ]
+export async function Vendors({ title, description }: IVendorsProps) {
+  const { vendorsData } = await getVendorsData()
 
   return (
-    <section className={styles.wrapper} style={{ marginBottom: `${Math.ceil(example.length / 3) * 20}rem` }}>
+    <section className={styles.wrapper} style={{ marginBottom: `${Math.ceil(vendorsData.length / 3) * 20}rem` }}>
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ВЕНДОРЫ</h2>
@@ -38,7 +20,9 @@ export function Vendors({ title, description }: IVendorsProps) {
           <p className={styles.text}>{description}</p>
 
           <div className={styles.list}>
-            {example.map((item, index) => <VendorsItem key={index} image={item.image} />)}
+            {vendorsData.map((item, index) =>
+              <VendorsItem key={index} image={item.vendors_photo} />
+            )}
           </div>
         </div>
       </div>
