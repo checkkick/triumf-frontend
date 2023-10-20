@@ -1,18 +1,18 @@
 interface ICompanyData {
-   "aboutUs_headline_one": string
-   "aboutUs_description_one": string
-   "aboutUs_headline_two": string
-   "aboutUs_description_two": string
-   "aboutUs_headline_three": string
-   "aboutUs_description_three": string
-   "block1_int": number
-   "block1_title": string
-   "block2_int": number
-   "block2_title": string
-   "block3_int": number
-   "block3_title": string
-   "block4_int": number
-   "block4_title": string
+   aboutUs_headline_one: string
+   aboutUs_description_one: string
+   aboutUs_headline_two: string
+   aboutUs_description_two: string
+   aboutUs_headline_three: string
+   aboutUs_description_three: string
+   block1_int: number
+   block1_title: string
+   block2_int: number
+   block2_title: string
+   block3_int: number
+   block3_title: string
+   block4_int: number
+   block4_title: string
 }
 
 export interface IOurSuperiority {
