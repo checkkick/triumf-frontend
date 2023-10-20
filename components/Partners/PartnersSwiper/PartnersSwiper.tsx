@@ -2,6 +2,7 @@
 'use client'
 import React from 'react';
 import styles from './partnersswiper.module.scss';
+import { IPartnersData } from '@/api/getPartnersData';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
@@ -9,34 +10,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 
-export function PartnersSwiper() {
-  const exapmle = [
-    {
-      image: '/partner-1.png',
-      bgImage: '/bg-partner-1.png'
-    },
-    {
-      image: '/partner-2.png',
-      bgImage: '/bg-partner-2.png'
-    },
-    {
-      image: '/partner-3.png',
-      bgImage: '/bg-partner-3.png'
-    },
-    {
-      image: '/partner-1.png',
-      bgImage: '/bg-partner-1.png'
-    },
-    {
-      image: '/partner-2.png',
-      bgImage: '/bg-partner-2.png'
-    },
-    {
-      image: '/partner-3.png',
-      bgImage: '/bg-partner-3.png'
-    },
-  ]
-
+export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[] }) {
   return (
     <Swiper
       modules={[Navigation, Autoplay]}
@@ -50,9 +24,9 @@ export function PartnersSwiper() {
       }}
     >
       {
-        exapmle.map((item, index) =>
-          <SwiperSlide key={index} className={styles.slide} style={{ backgroundImage: `url(${item.bgImage})` }}>
-            <img src={item.image} alt="partner image" />
+        partnersData.map((item, index) =>
+          <SwiperSlide key={index} className={styles.slide} style={{ backgroundImage: `url(${item.partners_back_photo})` }}>
+            <img src={item.partners_front_photo} alt="partner image" />
           </SwiperSlide>
         )
       }

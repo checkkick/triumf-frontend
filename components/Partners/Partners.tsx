@@ -1,13 +1,16 @@
 import React from 'react';
 import styles from './partners.module.scss';
 import { PartnersSwiper } from './PartnersSwiper';
+import getPartnersData from '@/api/getPartnersData';
 
 interface IPartnersProps {
   title: string
   description: string
 }
 
-export function Partners({ title, description }: IPartnersProps) {
+export async function Partners({ title, description }: IPartnersProps) {
+  const { partnersData } = await getPartnersData()
+
   return (
     <section id='partners' className={styles.wrapper}>
       <div className="container">
@@ -16,7 +19,7 @@ export function Partners({ title, description }: IPartnersProps) {
           <h2 className={styles.subtitle}>{title}</h2>
           <p className={styles.text}>{description}</p>
 
-          <PartnersSwiper />
+          <PartnersSwiper partnersData={partnersData} />
         </div>
       </div>
     </section>
