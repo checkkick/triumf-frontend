@@ -2,12 +2,15 @@
 import React from 'react';
 import styles from './contacts.module.scss';
 import { ContactsForm } from './ContactsForm';
+import getFooterData from '@/api/getFooterData';
 
 interface IContactsProps {
   title: string
 }
 
-export function Contacts({ title }: IContactsProps) {
+export async function Contacts({ title }: IContactsProps) {
+  const footerData = await getFooterData()
+
   return (
     <section className={styles.wrapper}>
       <div id='contacts' className={styles.anchor}></div>
@@ -20,7 +23,7 @@ export function Contacts({ title }: IContactsProps) {
 
             <div className={styles.qr}>
               <p className={styles.qrText}>{title}</p>
-              <img className={styles.qrImage} src="/contacts-qr.png" alt="contacts qr" />
+              <img className={styles.qrImage} src={footerData.footer_qr} alt="contacts qr" />
             </div>
           </div>
         </div>
