@@ -4,13 +4,12 @@ import { DownloadButton } from './DownloadButton';
 
 interface ICompanyProps {
   title: string
-  description: string
+  descriptionTop: string
+  descriptionBottom: string
   presentationLink: string
 }
 
-export function Company({ title, description, presentationLink }: ICompanyProps) {
-  const [descriptionTop, descriptionBottom] = description.split('\n')
-
+export function Company({ title, descriptionTop, descriptionBottom, presentationLink }: ICompanyProps) {
   return (
     <section className={styles.wrapper}>
       <div className="container">

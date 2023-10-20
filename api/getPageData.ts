@@ -1,7 +1,8 @@
 interface IPageData {
    basic_title: string
    company_title: string
-   company_description: string
+   company_description1: string
+   company_description2: string
    company_presentation: string
    devices_title: string
    partners_title: string

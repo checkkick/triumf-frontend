@@ -19,7 +19,8 @@ export default async function Home() {
       <About />
       <Company
         title={pageData.company_title}
-        description={pageData.company_description}
+        descriptionTop={pageData.company_description1}
+        descriptionBottom={pageData.company_description2}
         presentationLink={pageData.company_presentation} />
       <Equipment
         title={pageData.devices_title} />
