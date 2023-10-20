@@ -26,7 +26,7 @@ export interface IAbout {
 }
 
 async function getData() {
-   const res = await fetch(`${process.env.API}/api/home/company/`, {
+   const res = await fetch(`${process.env.API}/company/`, {
       method: 'GET',
       headers: {
          "Content-Type": "application/json",
