@@ -1,0 +1,14 @@
+.swiperBlock {
+   align-self: normal;
+
+   & .swiper {
+      cursor: grab;
+      padding-top: 5rem;
+      margin-top: -5rem;
+   }
+
+   & .swiperSlide {
+      align-self: stretch;
+      height: auto;
+   }
+}
