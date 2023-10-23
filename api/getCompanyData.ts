@@ -1,3 +1,5 @@
+import { getFetch } from "@/utils/getFetch"
+
 interface ICompanyData {
    aboutUs_headline_one: string
    aboutUs_description_one: string
@@ -25,23 +27,8 @@ export interface IAbout {
    text: string
 }
 
-async function getData() {
-   const res = await fetch(`${process.env.API}/company/`, {
-      method: 'GET',
-      headers: {
-         "Content-Type": "application/json",
-      },
-   })
-
-   if (!res.ok) {
-      throw new Error('Failed to fetch data about company')
-   }
-
-   return await res.json()
-}
-
 export default async function getCompanyData() {
-   const [data]: ICompanyData[] = await getData()
+   const [data]: ICompanyData[] = await getFetch('company')
 
    const about: IAbout[] = [
       {

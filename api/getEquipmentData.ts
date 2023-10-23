@@ -1,3 +1,5 @@
+import { getFetch } from "@/utils/getFetch"
+
 export interface IEquipmentData {
    id: number
    devices_photo: string
@@ -6,24 +8,8 @@ export interface IEquipmentData {
    devices_price: string
 }
 
-async function getData() {
-   const res = await fetch(`${process.env.API}/devices/`, {
-      method: 'GET',
-      headers: {
-         "Content-Type": "application/json",
-      },
-   })
-
-   if (!res.ok) {
-      throw new Error('Failed to fetch equipment data')
-   }
-
-
-   return await res.json()
-}
-
 export default async function getEquipmentData() {
-   const data: IEquipmentData[] = await getData()
+   const data: IEquipmentData[] = await getFetch('devices')
 
    return { data }
 }
