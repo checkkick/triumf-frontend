@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './buttonmore.module.scss';
 
-export function ButtonMore() {
+export function ButtonMore({ click }: { click: () => void }) {
   return (
-    <button className={styles.btn}>
+    <button className={styles.btn} onClick={click}>
       <p className={styles.btnText}>Подробнее</p>
       <div className={styles.circle}>
         <svg className={styles.arrow} width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,18 +1,13 @@
 import React from 'react';
 import styles from './newsitem.module.scss';
+import { INewsData } from '@/api/getNewsData';
 
-interface INewsItem {
-  bgImage: string
-  title: string
-  text: string
-}
-
-export function NewsItem({ bgImage, title, text }: INewsItem) {
+export function NewsItem({ news_title, news_description, news_photo }: Pick<INewsData, 'news_title' | 'news_description' | 'news_photo'>) {
   return (
-    <a href='#' className={styles.card} style={{ backgroundImage: `url(${bgImage})` }}>
+    <a href='#' className={styles.card} style={{ background: `url(${news_photo || 'banner-logo.svg'}) no-repeat center center / cover, #21242C` }}>
       <div className={styles.content}>
-        <h5 className={styles.title}>{title}</h5>
-        <p className={styles.text}>{text}</p>
+        <h5 className={styles.title}>{news_title}</h5>
+        <p className={styles.text}>{news_description}</p>
       </div>
 
       <span className={styles.logo}>

@@ -34,14 +34,3 @@
    color: $text-white;
    margin-bottom: 1.6rem;
 }
-
-.list {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 1rem;
-   margin-bottom: 3rem;
-
-}
