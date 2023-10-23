@@ -15,7 +15,6 @@ export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[]
     <Swiper
       modules={[Navigation, Autoplay]}
       navigation
-      loop
       className={styles.swiper}
       spaceBetween={35}
       slidesPerView={3}
