@@ -3,7 +3,7 @@
 
 .swiper {
    width: 100%;
-   padding: 0 2rem;
+   padding: 0 2rem 2rem;
 
    :global(.swiper-button-prev) {
       width: 42px;
@@ -11,6 +11,10 @@
       border-radius: 5px;
       background-color: rgba($black, 0.8);
       left: 0;
+
+      @media (max-width: 750px) {
+         display: none;
+      }
 
       &::after {
          color: $gray;
@@ -25,9 +29,21 @@
       background-color: rgba($black, 0.8);
       right: 0;
 
+      @media (max-width: 750px) {
+         display: none;
+      }
+
       &::after {
          color: $gray;
          font-size: 24px;
+      }
+   }
+
+   :global(.swiper-scrollbar) {
+      display: none;
+
+      @media (max-width: 1300px) {
+         display: block;
       }
    }
 }

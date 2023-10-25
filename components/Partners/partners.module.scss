@@ -3,6 +3,11 @@
 
 .wrapper {
    margin-bottom: 6.3rem;
+
+
+   @media (max-width: 650px) {
+      margin-bottom: 3rem;
+   }
 }
 
 .content {
@@ -33,6 +38,10 @@
    @include defineFontHalvarBreit(700, 2.5rem);
    color: $text-white;
    margin-bottom: 1.6rem;
+
+   @media (max-width: 650px) {
+      font-size: 1.5rem;
+   }
 }
 
 .text {
@@ -43,4 +52,8 @@
    @include defineFontHalvarBreit(400, 1.5rem);
    color: $text-white;
    margin-bottom: 3.5rem;
+
+   @media (max-width: 650px) {
+      display: none;
+   }
 }

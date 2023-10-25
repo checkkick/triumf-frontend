@@ -5,19 +5,35 @@ import styles from './partnersswiper.module.scss';
 import { IPartnersData } from '@/api/getPartnersData';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Scrollbar } from 'swiper/modules';
+import { SwiperOptions } from 'swiper/types';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
+import 'swiper/scss/scrollbar';
 
 export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[] }) {
+  const swiperBreakpoints: SwiperOptions["breakpoints"] = {
+    1300: {
+      slidesPerView: 3
+    },
+    750: {
+      slidesPerView: 2,
+      spaceBetween: 35
+    },
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 15
+    }
+  }
+
   return (
     <Swiper
-      modules={[Navigation, Autoplay]}
+      modules={[Navigation, Autoplay, Scrollbar]}
       navigation
+      breakpoints={swiperBreakpoints}
+      scrollbar
       className={styles.swiper}
-      spaceBetween={35}
-      slidesPerView={3}
       autoplay={{
         delay: 4000,
       }}
