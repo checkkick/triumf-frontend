@@ -6,6 +6,13 @@ export default function Header() {
       <header className={styles.wrapper}>
          <div className="container">
             <ul className={styles.list}>
+               <li className={styles.burgerMenu}>
+                  <a href="#" className={styles.burgerMenuLogo}>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 10H21M3 6H21M3 14H21M3 18H21" stroke="#A7B5BD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                     </svg>
+                  </a>
+               </li>
                <li className={styles.listItem}>
                   <a href="#" className={styles.logo}>
                      <svg width="55" height="53" viewBox="0 0 55 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +22,7 @@ export default function Header() {
                      </svg>
                   </a>
                </li>
-               <li className={styles.listItem}>
+               <li className={styles.listItemNav}>
                   <nav className={styles.nav}>
                      <ul className={styles.navList}>
                         <li className={styles.navItem}>

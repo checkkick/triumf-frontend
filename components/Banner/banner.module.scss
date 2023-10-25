@@ -18,6 +18,10 @@
    position: relative;
    @include defineFontHalvarBreit(700, 12.5rem);
    color: $text-white;
+
+   @media (max-width: 910px) {
+      font-size: 4rem;
+   }
 }
 
 .subtitle {
@@ -25,12 +29,22 @@
    @include defineFontHalvarBreit(300, 2rem);
    margin-bottom: 2.3rem;
    color: $text-white;
+
+   @media (max-width: 910px) {
+      max-width: 90%;
+      font-size: 1.25rem;
+   }
 }
 
 .btnRow {
    display: flex;
    align-items: center;
    gap: 1rem;
+
+   @media (max-width: 910px) {
+      align-self: center;
+      flex-direction: column;
+   }
 }
 
 .btnContact,
@@ -53,6 +67,11 @@
       opacity: 1;
       transform: translateX(-1rem);
    }
+
+   @media (max-width: 910px) {
+      padding: 0.8rem 1rem;
+      border-radius: 0.3125rem;
+   }
 }
 
 .btnContact {
@@ -72,6 +91,10 @@
    @include defineFontHalvarBreit(300, 1.25rem);
    color: inherit;
    transition: 0.2s transform ease-in-out;
+
+   @media (max-width: 910px) {
+      font-size: 0.875rem;
+   }
 }
 
 .btnArrow {

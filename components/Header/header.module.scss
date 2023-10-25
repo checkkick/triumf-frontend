@@ -22,10 +22,32 @@
    padding: 0;
 }
 
+.burgerMenu {
+   display: none;
+
+   & svg path {
+      transition: 0.2s stroke ease-in-out;
+   }
+
+   &:hover svg path {
+      stroke: $white;
+   }
+
+   @media (max-width: 910px) {
+      display: block;
+   }
+}
+
 .logo {
    @include defineFontHalvarBreit(300, 16px);
    text-decoration: none;
 
+   & svg {
+      @media (max-width: 910px) {
+         width: 2.5rem;
+         height: 2.5rem;
+      }
+   }
 
    & svg path {
       transition: 0.2s fill ease-in-out;
@@ -33,6 +55,14 @@
 
    &:hover svg path {
       fill: $white;
+   }
+}
+
+.listItemNav {
+   display: block;
+
+   @media (max-width: 910px) {
+      display: none;
    }
 }
 
@@ -76,6 +106,13 @@
 .profile {
    @include defineFontHalvarBreit(300, 16px);
    text-decoration: none;
+
+   & svg {
+      @media (max-width: 910px) {
+         width: 1.8rem;
+         height: 1.8rem;
+      }
+   }
 
    & svg path {
       transition: 0.2s stroke ease-in-out;
