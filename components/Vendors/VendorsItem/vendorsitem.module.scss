@@ -14,6 +14,11 @@
    box-shadow: 10px 20px 20px 0px rgba($black, 0.35);
    transition: 0.2s background-color ease-in-out;
 
+   @media (max-width: 650px) {
+      height: 11.5rem;
+      padding: 1rem 1rem;
+   }
+
    &::after {
       z-index: -1;
       opacity: 0;
@@ -43,6 +48,7 @@
 }
 
 .image {
-   width: 100%;
+   width: 90%;
+   height: 100%;
    transition: 0.2s transform ease-in-out;
 }
