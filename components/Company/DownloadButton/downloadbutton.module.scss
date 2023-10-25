@@ -28,6 +28,10 @@
          animation-name: bubbleBorder;
       }
    }
+
+   @media (max-width: 1150px) {
+      margin-left: 1rem;
+   }
 }
 
 .btnText {
@@ -47,9 +51,14 @@
       background-color: $white;
       transition: 0.2s opacity ease-in-out;
    }
+
+   @media (max-width: 650px) {
+      font-size: 1rem;
+   }
 }
 
 .circle {
+   z-index: 1;
    position: relative;
    width: 2.5rem;
    height: 2.5rem;

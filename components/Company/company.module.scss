@@ -11,7 +11,35 @@
 }
 
 .about {
-   background: url('~/assets/images/company-background.png') no-repeat center right / 70% 100%;
+   position: relative;
+}
+
+.background {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+
+   &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 150px;
+      left: 150px;
+      background: url('~/assets/images/company-background.png') no-repeat center / cover;
+
+      @media (max-width: 1150px) {
+         right: 30px;
+         left: 30px;
+      }
+   }
+
+   @media (max-width: 900px) {
+      display: none;
+   }
 }
 
 .title {
@@ -31,6 +59,10 @@
       height: 51px;
       background: url('~/assets/images/cubes-left.svg') no-repeat center center;
    }
+
+   @media (max-width: 650px) {
+      font-size: 1.25rem;
+   }
 }
 
 .subtitle {
@@ -38,6 +70,14 @@
    @include defineFontHalvarBreit(700, 2.5rem);
    color: $text-white;
    margin-bottom: 1.75rem;
+
+   @media (max-width: 900px) {
+      max-width: none;
+   }
+
+   @media (max-width: 650px) {
+      font-size: 1.5rem;
+   }
 }
 
 .text {
@@ -45,6 +85,14 @@
    @include defineFontHalvarBreit(400, 1.5rem);
    color: $text-white;
    margin-bottom: 1.12rem;
+
+   @media (max-width: 900px) {
+      max-width: none;
+   }
+
+   @media (max-width: 650px) {
+      font-size: 1rem;
+   }
 }
 
 .subtext {
@@ -52,4 +100,25 @@
    @include defineFontHalvarBreit(300, 1.25rem);
    color: $text-white;
    margin-bottom: 1.4rem;
+
+   @media (max-width: 900px) {
+      max-width: none;
+   }
+
+   @media (max-width: 650px) {
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+   }
+}
+
+.image {
+   width: 100%;
+   max-height: 30rem;
+   object-fit: cover;
+   margin-bottom: 1.9rem;
+   display: none;
+
+   @media (max-width: 900px) {
+      display: block;
+   }
 }
