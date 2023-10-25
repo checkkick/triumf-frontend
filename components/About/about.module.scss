@@ -1,8 +1,15 @@
 @import '@/styles/variables.scss';
 
-.wrapper {
+.section {
    position: relative;
+}
+
+.wrapper {
    background-color: rgba($text-white, 0.6);
+
+   @media (max-width: 1150px) {
+      margin-bottom: 1rem;
+   }
 }
 
 .content {

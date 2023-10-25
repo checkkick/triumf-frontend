@@ -6,8 +6,12 @@ import { IOurSuperiority } from '@/api/getCompanyData';
 export function AboutBanner({ ourSuperiority }: { ourSuperiority: IOurSuperiority[] }) {
   return (
     <div className={styles.wrapper}>
-      {ourSuperiority.map((item, index) =>
-        <AboutBannerItem key={index} title={item.title} text={item.text} />)}
+      <div className="container">
+        <div className={styles.content}>
+          {ourSuperiority.map((item, index) =>
+            <AboutBannerItem key={index} title={item.title} text={item.text} />)}
+        </div>
+      </div>
     </div>
   );
 }
