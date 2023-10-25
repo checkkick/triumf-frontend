@@ -2,11 +2,7 @@
 
 .wrapper {
    position: relative;
-   background-color: rgba($text-white, 0.9);
-
-   @media (max-width: 1150px) {
-      background-color: rgba($text-white, 0.6);
-   }
+   background-color: rgba($text-white, 0.6);
 }
 
 .content {
