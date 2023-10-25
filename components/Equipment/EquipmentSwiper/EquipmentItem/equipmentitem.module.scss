@@ -23,13 +23,19 @@
       transition: 0.5s ease-in-out;
    }
 
-   &:hover {
+   &:hover,
+   &:focus-visible,
+   &:active {
       &::after {
          --x: 80%;
       }
 
       .image {
          transform: translateY(-4rem);
+
+         @media (max-width: 1300px) {
+            transform: scale(0.9) translateY(-4rem);
+         }
       }
 
       .title {
@@ -48,6 +54,10 @@
    width: 100%;
    transform: scale(1.1);
    transition: 0.2s transform ease-in-out;
+
+   @media (max-width: 1300px) {
+      transform: scale(1);
+   }
 }
 
 .title {
@@ -60,6 +70,10 @@
    display: -webkit-box;
    -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
+
+   @media (max-width: 650px) {
+      font-size: 1rem;
+   }
 }
 
 .text {
