@@ -20,6 +20,10 @@
    color: $text-white;
 
    @media (max-width: 910px) {
+      font-size: 8rem;
+   }
+
+   @media (max-width: 650px) {
       font-size: 4rem;
    }
 }
@@ -32,6 +36,10 @@
 
    @media (max-width: 910px) {
       max-width: 90%;
+      font-size: 1.5rem;
+   }
+
+   @media (max-width: 650px) {
       font-size: 1.25rem;
    }
 }
@@ -41,7 +49,7 @@
    align-items: center;
    gap: 1rem;
 
-   @media (max-width: 910px) {
+   @media (max-width: 650px) {
       align-self: center;
       flex-direction: column;
    }
