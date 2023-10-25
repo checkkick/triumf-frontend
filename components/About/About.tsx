@@ -13,7 +13,8 @@ export async function About() {
         <div className={styles.anchor} id='about'></div>
         <div className="container">
           <div className={styles.content}>
-            {about.map((item, index) => <AboutItem key={index} index={index} title={item.title} text={item.text} />)}
+            {about.map((item, index) =>
+              <AboutItem key={index} index={index} title={item.title} text={item.text} />)}
           </div>
         </div>
       </div>
