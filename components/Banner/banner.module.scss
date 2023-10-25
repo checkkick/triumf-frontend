@@ -67,17 +67,21 @@
    padding: 1.2rem 3.2rem;
    cursor: pointer;
 
-   &:hover .btnText {
+   &:hover .btnText,
+   &:focus-visible .btnText,
+   &:active .btnText {
       transform: translateX(-1rem);
    }
 
-   &:hover .btnArrow {
+   &:hover .btnArrow,
+   &:focus-visible .btnArrow,
+   &:active .btnArrow {
       opacity: 1;
       transform: translateX(-1rem);
    }
 
    @media (max-width: 910px) {
-      padding: 0.8rem 1rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 0.3125rem;
    }
 }
