@@ -3,6 +3,10 @@
 .wrapper {
    position: relative;
    background-color: rgba($text-white, 0.9);
+
+   @media (max-width: 1150px) {
+      background-color: rgba($text-white, 0.6);
+   }
 }
 
 .content {
@@ -11,6 +15,18 @@
    grid-template-columns: repeat(3, 1fr);
    gap: 5.5rem;
    padding: 8rem 0;
+
+   @media (max-width: 1150px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 0;
+      gap: 1.6rem;
+   }
+
+   @media (max-width: 650px) {
+      padding: 1.2rem 0;
+   }
 }
 
 .anchor {

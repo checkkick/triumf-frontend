@@ -5,7 +5,43 @@
    position: relative;
    display: grid;
    grid-template-rows: repeat(2, 1fr);
-   gap: 2rem
+   gap: 2rem;
+
+   @media (max-width: 1150px) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-left: 50px;
+   }
+
+   &:nth-child(2n) {
+      @media (max-width: 1150px) {
+         text-align: end;
+         align-self: flex-end;
+         margin-right: 50px;
+         margin-left: 0;
+
+         & .position {
+            left: auto;
+            right: -4rem;
+
+            &::after {
+               right: auto;
+               left: -1.8rem;
+            }
+         }
+      }
+
+      @media (max-width: 650px) {
+         & .position {
+            right: -2.7rem;
+
+            &::after {
+               left: -1.2rem;
+            }
+         }
+      }
+   }
 }
 
 .position {
@@ -15,6 +51,17 @@
    top: 0.4rem;
    left: -4rem;
 
+   @media (max-width: 1150px) {
+      top: 0.25rem;
+      font-size: 1rem;
+   }
+
+   @media (max-width: 650px) {
+      top: 0.1rem;
+      font-size: 0.8rem;
+      left: -2.7rem;
+   }
+
    &::after {
       content: '';
       position: absolute;
@@ -23,15 +70,40 @@
       height: 1px;
       width: 1.5rem;
       background-color: $gray;
+
+      @media (max-width: 650px) {
+         width: 1rem;
+      }
+
+      @media (max-width: 650px) {
+         top: 47%;
+         right: -1.2rem;
+      }
    }
 }
 
 .title {
    @include defineFontHalvarBreit(700, 2rem);
    color: $black;
+
+   @media (max-width: 1150px) {
+      font-size: 1.5rem;
+   }
+
+   @media (max-width: 650px) {
+      font-size: 1rem;
+   }
 }
 
 .text {
    @include defineFontHalvarBreit(300, 1rem);
    color: $black;
+
+   @media (max-width: 1150px) {
+      font-size: 0.85rem;
+   }
+
+   @media (max-width: 650px) {
+      font-size: 0.75rem;
+   }
 }
