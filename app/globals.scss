@@ -49,3 +49,25 @@ body {
       padding: 0 10px;
    }
 }
+
+.menu-mobile-enter {
+   opacity: 0;
+   transform: translateX(-100%);
+}
+
+.menu-mobile-enter-active {
+   opacity: 1;
+   transform: translateX(0);
+   transition: 0.2s opacity ease-in-out, 0.2s transform ease-in-out;
+}
+
+.menu-mobile-exit {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.menu-mobile-exit-active {
+   opacity: 0;
+   transform: translateX(-100%);
+   transition: 0.2s opacity ease-in-out, 0.2s transform ease-in-out;
+}

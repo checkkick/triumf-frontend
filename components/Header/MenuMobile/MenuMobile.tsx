@@ -1,10 +1,12 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './menumobile.module.scss'
+import { CSSTransition } from 'react-transition-group';
 import { preventDefault } from '@/utils/preventDefault'
 
 export default function MenuMobile() {
    const [menuShow, setMenuShow] = useState(false)
+   const nodeRef = useRef(null);
 
    function burgerClick(event: React.MouseEvent<HTMLAnchorElement>) {
       event.preventDefault()
@@ -33,8 +35,8 @@ export default function MenuMobile() {
       <li className={styles.burgerMenu}>
          {burgerLogo}
 
-         {menuShow && (
-            <div className={styles.menu}>
+         <CSSTransition nodeRef={nodeRef} in={menuShow} timeout={200} classNames={"menu-mobile"} unmountOnExit>
+            <div ref={nodeRef} className={styles.menu}>
                {burgerLogo}
 
                <nav className={styles.nav}>
@@ -57,7 +59,7 @@ export default function MenuMobile() {
                      </li>
                   </ul>
 
-                  <a href="#" className={styles.profile}>
+                  <a onClick={closeMenu} href="#" className={styles.profile}>
                      <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M30.625 32.0834C30.625 25.64 25.3364 20.4167 18.8125 20.4167H16.1875C9.66364 20.4167 4.375 25.64 4.375 32.0834M17.5 16.0417C14.2783 16.0417 11.6667 13.43 11.6667 10.2084V8.75002C11.6667 5.52836 14.2783 2.91669 17.5 2.91669C20.7217 2.91669 23.3333 5.52836 23.3333 8.75002V10.2084C23.3333 13.43 20.7217 16.0417 17.5 16.0417Z" stroke="#A7B5BD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                      </svg>
@@ -65,7 +67,11 @@ export default function MenuMobile() {
                   </a>
                </nav>
             </div>
-         )}
+         </CSSTransition>
+
+         {/* {menuShow && (
+
+         )} */}
       </li>
    )
 }
