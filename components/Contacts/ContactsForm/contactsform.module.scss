@@ -8,6 +8,11 @@
    flex-direction: column;
    gap: 3.7rem;
    margin-bottom: 4rem;
+
+   @media (max-width: 650px) {
+      margin-bottom: 0;
+      gap: 3rem;
+   }
 }
 
 .row {
@@ -27,6 +32,10 @@
    @include defineFontHalvarBreit(300, 1.25rem);
    color: $white;
    margin-bottom: 0.5rem;
+
+   @media (max-width: 650px) {
+      font-size: 1rem;
+   }
 }
 
 .alert,
@@ -38,6 +47,10 @@
    right: 0;
    left: 0;
    color: red;
+
+   @media (max-width: 650px) {
+      font-size: 0.8rem;
+   }
 }
 
 .success {
@@ -55,6 +68,10 @@
    background: transparent;
    outline: none;
    resize: none;
+
+   @media (max-width: 650px) {
+      font-size: 0.9rem;
+   }
 
    &::placeholder {
       color: rgba(225, 225, 225, 0.30);
@@ -75,11 +92,20 @@
    background: $text-white;
    cursor: pointer;
 
-   &:hover .btnText {
+   @media (max-width: 910px) {
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.3125rem;
+   }
+
+   &:hover .btnText,
+   &:focus-visible .btnText,
+   &:active .btnText {
       transform: translateX(-1rem);
    }
 
-   &:hover .btnArrow {
+   &:hover .btnArrow,
+   &:focus-visible .btnArrow,
+   &:active .btnArrow {
       opacity: 1;
       transform: translateX(-1rem);
    }
@@ -92,6 +118,10 @@
    @include defineFontHalvarBreit(300, 1.25rem);
    color: $main-black;
    transition: 0.2s transform ease-in-out;
+
+   @media (max-width: 910px) {
+      font-size: 1rem;
+   }
 }
 
 .btnArrow {
@@ -99,4 +129,10 @@
    right: -3.4rem;
    opacity: 0;
    transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out;
+
+   @media (max-width: 650px) {
+      right: -3rem;
+      width: 35px;
+      height: 35px;
+   }
 }
