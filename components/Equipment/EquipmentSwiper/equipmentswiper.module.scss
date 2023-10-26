@@ -11,12 +11,4 @@
       align-self: stretch;
       height: auto;
    }
-
-   :global(.swiper-scrollbar) {
-      display: none;
-
-      @media (max-width: 1300px) {
-         display: block;
-      }
-   }
 }

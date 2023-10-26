@@ -20,10 +20,6 @@ export function EquipmentSwiper({ equipmentData }: { equipmentData: IEquipmentDa
       slidesPerView: 2,
       spaceBetween: 25
     },
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 25
-    }
   }
 
   return (
@@ -34,6 +30,8 @@ export function EquipmentSwiper({ equipmentData }: { equipmentData: IEquipmentDa
         modules={[FreeMode, Mousewheel, Scrollbar]}
         freeMode
         scrollbar
+        slidesPerView={1}
+        spaceBetween={25}
         mousewheel={{ releaseOnEdges: true, eventsTarget: '#equipment' }}
       >
         {equipmentData.map((item, index) =>

@@ -13,26 +13,25 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/scrollbar';
 
 export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[] }) {
-  const swiperBreakpoints: SwiperOptions["breakpoints"] = {
+  const partnersSwiperBreakpoints: SwiperOptions["breakpoints"] = {
     1300: {
-      slidesPerView: 3
+      slidesPerView: 3,
+      spaceBetween: 35
     },
     750: {
       slidesPerView: 2,
       spaceBetween: 35
     },
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    }
   }
 
   return (
     <Swiper
       modules={[Navigation, Autoplay, Scrollbar]}
       navigation
-      breakpoints={swiperBreakpoints}
+      breakpoints={partnersSwiperBreakpoints}
       scrollbar
+      slidesPerView={1}
+      spaceBetween={20}
       className={styles.swiper}
       autoplay={{
         delay: 4000,
