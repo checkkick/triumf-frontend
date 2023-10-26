@@ -8,9 +8,11 @@ import { Vendors } from '@/components/Vendors'
 import { News } from '@/components/News'
 import { Contacts } from '@/components/Contacts'
 import getPageData from '@/api/getPageData'
+import getNewsData from '@/api/getNewsData'
 
 export default async function Home() {
   const { pageData } = await getPageData()
+  const newsData = await getNewsData()
 
   return (
     <main className={styles.main}>
@@ -30,8 +32,11 @@ export default async function Home() {
       <Vendors
         title={pageData.vendors_title}
         description={pageData.vendors_description} />
-      <News
-        title={pageData.news_title} />
+      {newsData.length > 0 && (
+        <News
+          newsData={newsData}
+          title={pageData.news_title} />
+      )}
       <Contacts
         title={pageData.qr_title} />
     </main>

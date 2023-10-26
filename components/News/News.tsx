@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import styles from './news.module.scss';
-import getNewsData from '@/api/getNewsData';
+import getNewsData, { INewsData } from '@/api/getNewsData';
 import { NewsSwiper } from './NewsSwiper';
 
 interface INewsProps {
   title: string
+  newsData: INewsData[]
 }
 
-export async function News({ title }: INewsProps) {
-  const newsData = await getNewsData()
-
+export async function News({ title, newsData }: INewsProps) {
   return (
     <div id='news' className={styles.wrapper}>
       <div className="container">

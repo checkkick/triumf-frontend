@@ -4,7 +4,7 @@ import styles from './menumobile.module.scss'
 import { CSSTransition } from 'react-transition-group';
 import { preventDefault } from '@/utils/preventDefault'
 
-export default function MenuMobile() {
+export default function MenuMobile({ showNews }: { showNews: boolean }) {
    const [menuShow, setMenuShow] = useState(false)
    const nodeRef = useRef(null);
 
@@ -50,9 +50,11 @@ export default function MenuMobile() {
                      <li className={styles.navItem}>
                         <a onClick={closeMenu} href="#partners" className={styles.navLink}>Партнеры {navArrow}</a>
                      </li>
-                     <li className={styles.navItem}>
-                        <a onClick={closeMenu} href="#news" className={styles.navLink}>Новости {navArrow}</a>
-                     </li>
+                     {showNews &&
+                        <li className={styles.navItem}>
+                           <a onClick={closeMenu} href="#news" className={styles.navLink}>Новости {navArrow}</a>
+                        </li>
+                     }
                      <li className={styles.navItem}>
                         <a onClick={closeMenu} href="#contacts" className={styles.navLink}>Контакты {navArrow}</a>
 

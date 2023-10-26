@@ -1,13 +1,16 @@
 import React from 'react'
 import styles from './header.module.scss'
 import MenuMobile from './MenuMobile/MenuMobile'
+import getNewsData from '@/api/getNewsData'
 
-export default function Header() {
+export default async function Header() {
+   const newsData = await getNewsData()
+
    return (
       <header className={styles.wrapper}>
          <div className="container">
             <ul className={styles.list}>
-               <MenuMobile />
+               <MenuMobile showNews={newsData.length > 0} />
                <li className={styles.listItem}>
                   <a href="#" className={styles.logo}>
                      <svg width="55" height="53" viewBox="0 0 55 53" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,9 +32,11 @@ export default function Header() {
                         <li className={styles.navItem}>
                            <a href="#partners" className={styles.navLink}>Партнеры</a>
                         </li>
-                        <li className={styles.navItem}>
-                           <a href="#news" className={styles.navLink}>Новости</a>
-                        </li>
+                        {newsData.length > 0 &&
+                           <li className={styles.navItem}>
+                              <a href="#news" className={styles.navLink}>Новости</a>
+                           </li>
+                        }
                         <li className={styles.navItem}>
                            <a href="#contacts" className={styles.navLink}>Контакты</a>
                         </li>
