@@ -24,6 +24,12 @@
    @include defineFontHalvarBreit(300, 16px);
    text-decoration: none;
 
+   & svg {
+      @media (max-width: 910px) {
+         width: 2.5rem;
+         height: 2.5rem;
+      }
+   }
 
    & svg path {
       transition: 0.2s fill ease-in-out;
@@ -39,11 +45,21 @@
    align-items: center;
    gap: 3rem;
    list-style: none;
+
+   @media (max-width: 910px) {
+      gap: 1.5rem;
+   }
 }
 
 .socialsLink {
-   @include defineFontHalvarBreit(300, 16px);
    text-decoration: none;
+
+   & svg {
+      @media (max-width: 910px) {
+         width: 1.5rem;
+         height: 1.5rem;
+      }
+   }
 
    & svg path {
       transition: 0.2s fill ease-in-out;
@@ -59,6 +75,10 @@
    color: $text-white;
    text-decoration: none;
    transition: 0.2s color ease-in-out;
+
+   @media (max-width: 910px) {
+      font-size: 0.7rem;
+   }
 
    &:hover {
       color: $white;
