@@ -29,7 +29,9 @@
       transition: 0.2s stroke ease-in-out;
    }
 
-   &:hover svg path {
+   &:hover svg path,
+   &:active svg path,
+   &:focus-visible svg path {
       stroke: $white;
    }
 
@@ -53,8 +55,14 @@
       transition: 0.2s fill ease-in-out;
    }
 
-   &:hover svg path {
+   &:hover svg path,
+   &:active svg path,
+   &:focus-visible svg path {
       fill: $white;
+   }
+
+   &:focus-visible {
+      outline: 1px solid $white;
    }
 }
 
@@ -81,8 +89,11 @@
    position: relative;
    transition: 0.2s color ease-in-out;
    color: $text-white;
+   outline: none;
 
-   &:hover {
+   &:hover,
+   &:active,
+   &:focus-visible {
       color: $white;
    }
 
@@ -97,7 +108,9 @@
       transition: width ease-in-out .2s, left ease-in-out .2s;
    }
 
-   &:hover::after {
+   &:hover::after,
+   &:active::after,
+   &:focus-visible::after {
       width: 100%;
       left: 0;
    }
@@ -118,7 +131,13 @@
       transition: 0.2s stroke ease-in-out;
    }
 
-   &:hover svg path {
+   &:hover svg path,
+   &:active svg path,
+   &:focus-visible svg path {
       stroke: $white;
+   }
+
+   &:focus-visible {
+      outline: 1px solid $white;
    }
 }

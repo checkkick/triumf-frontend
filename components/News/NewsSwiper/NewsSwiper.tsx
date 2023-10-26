@@ -5,7 +5,7 @@ import { INewsData } from '@/api/getNewsData';
 import { NewsItem } from './NewsItem';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Scrollbar } from 'swiper/modules';
+import { Navigation, Scrollbar, Keyboard } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
 
 import 'swiper/scss';
@@ -26,10 +26,13 @@ export function NewsSwiper({ newsData }: { newsData: INewsData[] }) {
 
   return (
     <Swiper
-      modules={[Navigation, Scrollbar]}
+      modules={[Navigation, Scrollbar, Keyboard]}
       navigation
       breakpoints={newsSwiperBreakpoints}
       scrollbar
+      keyboard={{
+        enabled: true,
+      }}
       slidesPerView={1}
       spaceBetween={20}
       className={styles.swiper}

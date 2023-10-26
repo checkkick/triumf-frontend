@@ -35,8 +35,14 @@
       transition: 0.2s fill ease-in-out;
    }
 
-   &:hover svg path {
+   &:hover svg path,
+   &:active svg path,
+   &:focus-visible svg path {
       fill: $white;
+   }
+
+   &:focus-visible {
+      outline: 1px solid $white;
    }
 }
 
@@ -65,8 +71,15 @@
       transition: 0.2s fill ease-in-out;
    }
 
-   &:hover svg path {
+   &:hover svg path,
+   &:active svg path,
+   &:focus-visible svg path {
       fill: $white;
+   }
+
+   &:focus-visible {
+      outline: 1px solid $white;
+      outline-offset: 5px;
    }
 }
 
@@ -80,7 +93,14 @@
       font-size: 0.7rem;
    }
 
-   &:hover {
+   &:hover,
+   &:active,
+   &:focus-visible {
       color: $white;
+   }
+
+   &:focus-visible {
+      outline: 1px solid $white;
+      outline-offset: 2px;
    }
 }

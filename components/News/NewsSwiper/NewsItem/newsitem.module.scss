@@ -9,8 +9,11 @@
    height: 21rem;
    border-radius: 5px;
    overflow: hidden;
+   outline: none;
 
-   &:hover {
+   &:hover,
+   &:active,
+   &:focus-visible {
       .content {
          transform: translateY(0);
       }

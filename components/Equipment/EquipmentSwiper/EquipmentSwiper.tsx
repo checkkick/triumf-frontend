@@ -5,7 +5,7 @@ import { EquipmentItem } from './EquipmentItem';
 import { IEquipmentData } from '@/api/getEquipmentData';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Mousewheel, Scrollbar } from 'swiper/modules';
+import { FreeMode, Mousewheel, Scrollbar, Keyboard } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
 import 'swiper/scss';
 import 'swiper/scss/scrollbar';
@@ -27,9 +27,12 @@ export function EquipmentSwiper({ equipmentData }: { equipmentData: IEquipmentDa
       <Swiper
         className={styles.swiper}
         breakpoints={swiperBreakpoints}
-        modules={[FreeMode, Mousewheel, Scrollbar]}
+        modules={[FreeMode, Mousewheel, Scrollbar, Keyboard]}
         freeMode
         scrollbar
+        keyboard={{
+          enabled: true,
+        }}
         slidesPerView={1}
         spaceBetween={25}
         mousewheel={{ releaseOnEdges: true, eventsTarget: '#equipment' }}
