@@ -38,4 +38,8 @@
    top: 0;
    right: 0;
    left: 0;
+
+   @media (max-width: 1150px) {
+      top: -5rem;
+   }
 }

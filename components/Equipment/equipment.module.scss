@@ -3,6 +3,12 @@
 
 .wrapper {
    margin-bottom: 5.5rem;
+
+   @media (max-width: 650px) {
+      &::before {
+         margin-top: -5rem;
+      }
+   }
 }
 
 .content {
