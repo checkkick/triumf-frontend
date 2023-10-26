@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './news.module.scss';
 import getNewsData from '@/api/getNewsData';
-import { NewsList } from './NewsItem copy';
+import { NewsList } from './NewsList';
 
 interface INewsProps {
   title: string

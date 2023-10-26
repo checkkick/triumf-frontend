@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './newslist.module.scss';
 import { INewsData } from '@/api/getNewsData';
-import { NewsItem } from '../NewsItem';
+import { NewsItem } from './NewsItem';
 import { ButtonMore } from '@/components/ButtonMore';
 
 export function NewsList({ newsData }: { newsData: INewsData[] }) {
