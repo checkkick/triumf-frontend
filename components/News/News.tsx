@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './news.module.scss';
 import getNewsData from '@/api/getNewsData';
-import { NewsList } from './NewsList';
+import { NewsSwiper } from './NewsSwiper';
 
 interface INewsProps {
   title: string
@@ -17,7 +17,7 @@ export async function News({ title }: INewsProps) {
           <h2 className={styles.title}>НОВОСТИ</h2>
           <h2 className={styles.subtitle}>Наша компания активно принимает участие в различных мероприятиях</h2>
 
-          <NewsList newsData={newsData} />
+          <NewsSwiper newsData={newsData} />
         </div>
       </div>
     </div>
