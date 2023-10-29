@@ -19,7 +19,7 @@ export async function Equipment({ title }: IEquipmentProps) {
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ОБОРУДОВАНИЕ</h2>
-          <h2 className={styles.subtitle}>{title}</h2>
+          <h3 className={styles.subtitle}>{title}</h3>
           <EquipmentSwiper equipmentData={data} />
         </div>
       </div>

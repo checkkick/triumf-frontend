@@ -14,7 +14,7 @@ export async function News({ title, newsData }: INewsProps) {
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>НОВОСТИ</h2>
-          <h2 className={styles.subtitle}>Наша компания активно принимает участие в различных мероприятиях</h2>
+          <h3 className={styles.subtitle}>Наша компания активно принимает участие в различных мероприятиях</h3>
 
           <NewsSwiper newsData={newsData} />
         </div>

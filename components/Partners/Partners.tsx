@@ -16,7 +16,7 @@ export async function Partners({ title, description }: IPartnersProps) {
       <div className="container">
         <div className={styles.content}>
           <h2 className={styles.title}>ПАРТНЕРЫ</h2>
-          <h2 className={styles.subtitle}>{title}</h2>
+          <h3 className={styles.subtitle}>{title}</h3>
           <p className={styles.text}>{description}</p>
 
           <PartnersSwiper partnersData={partnersData} />
