@@ -7,7 +7,7 @@ export function NewsItem({ news_title, news_description, news_photo }: Pick<INew
   return (
     <a onClick={preventDefault((e) => e)} href='#' className={styles.card} style={{ background: `url(${news_photo || 'banner-logo.svg'}) no-repeat center center / cover, #21242C` }}>
       <div className={styles.content}>
-        <h5 className={styles.title}>{news_title}</h5>
+        <h4 className={styles.title}>{news_title}</h4>
         <p className={styles.text}>{news_description}</p>
       </div>
 
