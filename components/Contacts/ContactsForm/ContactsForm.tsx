@@ -4,6 +4,7 @@ import styles from './contactsform.module.scss';
 import { useForm, SubmitHandler } from "react-hook-form";
 import InputMask from "react-input-mask";
 import postFeedback from '@/api/postFeedback';
+import { IfooterData } from '@/api/getFooterData';
 
 interface IFormInput {
   feedback_name: string
@@ -13,7 +14,7 @@ interface IFormInput {
   feedback_comments: string
 }
 
-export function ContactsForm() {
+export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_email_blank'>) {
   const [apiMsg, setApiMsg] = useState({ type: '', message: '' })
   const { register, formState: { errors }, handleSubmit, reset } = useForm<IFormInput>();
   const onSubmit: SubmitHandler<IFormInput> = async data => {
@@ -95,7 +96,7 @@ export function ContactsForm() {
       <div className={styles.row}>
         <div className={styles.block}>
           <label className={styles.label}>Наш email</label>
-          <input className={styles.input} value={'hi@triumf.it'} disabled />
+          <input className={styles.input} value={footer_email_blank} disabled />
         </div>
         <button className={styles.btn} type="submit">
           <p className={styles.btnText}>

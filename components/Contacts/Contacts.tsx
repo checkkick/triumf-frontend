@@ -19,7 +19,7 @@ export async function Contacts({ title }: IContactsProps) {
           <div className={styles.content}>
             <h2 className={styles.title}>СВЯЖИТЕСЬ С НАМИ</h2>
 
-            <ContactsForm />
+            <ContactsForm footer_email_blank={footerData.footer_email_blank} />
 
             <div className={styles.qr}>
               <p className={styles.qrText}>{title}</p>
