@@ -44,6 +44,7 @@ export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_e
         <div className={styles.block}>
           <label className={styles.label}>Имя</label>
           <input
+            aria-label='Имя'
             className={styles.input}
             {...register("feedback_name", { required: true, pattern: /^[А-Яа-я]+$/i })}
             placeholder='Иван' />
@@ -54,6 +55,7 @@ export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_e
         <div className={styles.block}>
           <label className={styles.label}>Фамилия</label>
           <input
+            aria-label='Фамилия'
             className={styles.input}
             {...register("feedback_surname", { pattern: /^[А-Яа-я]+$/i })}
             placeholder='Иванов' />
@@ -65,6 +67,7 @@ export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_e
         <div className={styles.block}>
           <label className={styles.label}>Email</label>
           <input
+            aria-label='Email'
             className={styles.input}
             {...register("feedback_email", { pattern: /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i })}
             placeholder='ivanov@ivan.ov' />
@@ -74,6 +77,7 @@ export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_e
         <div className={styles.block}>
           <label className={styles.label}>Телефон</label>
           <InputMask
+            aria-label='Телефон'
             className={styles.input}
             mask="+7(999)999-99-99"
             {...register("feedback_telephone", { required: true, pattern: /[\+][7][(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}/i })}
@@ -86,6 +90,7 @@ export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_e
       <div className={styles.block}>
         <label className={styles.label}>Комментарий</label>
         <textarea
+          aria-label='Комментарий'
           className={styles.input}
           {...register("feedback_comments", { required: true })}
           rows={5}
@@ -96,9 +101,13 @@ export function ContactsForm({ footer_email_blank }: Pick<IfooterData, 'footer_e
       <div className={styles.row}>
         <div className={styles.block}>
           <label className={styles.label}>Наш email</label>
-          <input className={styles.input} value={footer_email_blank} disabled />
+          <input
+            aria-label='Наш email'
+            className={styles.input}
+            value={footer_email_blank}
+            disabled />
         </div>
-        <button className={styles.btn} type="submit">
+        <button aria-label='Отправить форму' className={styles.btn} type="submit">
           <p className={styles.btnText}>
             Отправить
             <svg className={styles.btnArrow} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
