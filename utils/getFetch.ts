@@ -4,6 +4,7 @@ export async function getFetch(url: string) {
       headers: {
          "Content-Type": "application/json",
       },
+      next: { revalidate: 10 }
    })
 
    if (!res.ok) {
