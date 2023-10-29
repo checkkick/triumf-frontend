@@ -40,7 +40,7 @@ export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[]
       {
         partnersData.map((item, index) =>
           <SwiperSlide key={index} className={styles.slide} style={{ backgroundImage: `url(${item.partners_back_photo})` }}>
-            <img className={styles.image} src={item.partners_front_photo} alt="partner image" />
+            <img className={styles.image} src={item.partners_front_photo} loading='lazy' alt="partner image" />
           </SwiperSlide>
         )
       }

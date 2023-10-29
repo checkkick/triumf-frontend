@@ -20,7 +20,7 @@ export function Company({ title, descriptionTop, descriptionBottom, presentation
           <h3 className={styles.subtitle}>{title}</h3>
         </div>
 
-        <img className={styles.image} src="/company-mobile.png" alt="company about image" />
+        <img className={styles.image} loading='lazy' src="/company-mobile.png" alt="company about image" />
 
         <div className="container">
           <p className={styles.text}>

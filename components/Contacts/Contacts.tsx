@@ -23,7 +23,7 @@ export async function Contacts({ title }: IContactsProps) {
 
             <div className={styles.qr}>
               <p className={styles.qrText}>{title}</p>
-              <img className={styles.qrImage} src={footerData.footer_qr} alt="contacts qr" />
+              <img className={styles.qrImage} src={footerData.footer_qr} alt="contacts qr" loading='lazy' />
             </div>
           </div>
         </div>
