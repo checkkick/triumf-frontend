@@ -49,6 +49,6 @@
 
 .image {
    width: 90%;
-   height: 100%;
+   max-height: 90%;
    transition: 0.2s transform ease-in-out;
 }

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import styles from './contacts.module.scss';
 import { ContactsForm } from './ContactsForm';
@@ -32,7 +31,14 @@ export async function Contacts({ title }: IContactsProps) {
 
             <div className={styles.qr}>
               <p className={styles.qrText}>{title}</p>
-              <img className={styles.qrImage} src={footerData.footer_qr} alt="contacts qr" loading='lazy' />
+
+              <Image
+                className={styles.qrImage}
+                width={500}
+                height={500}
+                loading='lazy'
+                src={footerData.footer_qr}
+                alt='contacts qr' />
             </div>
           </div>
         </div>

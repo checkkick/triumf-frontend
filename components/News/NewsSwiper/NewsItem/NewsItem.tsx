@@ -2,10 +2,18 @@ import React from 'react';
 import styles from './newsitem.module.scss';
 import { INewsData } from '@/api/getNewsData';
 import { preventDefault } from '@/utils/preventDefault';
+import Image from 'next/image';
 
 export function NewsItem({ news_title, news_description, news_photo }: Pick<INewsData, 'news_title' | 'news_description' | 'news_photo'>) {
   return (
-    <a onClick={preventDefault((e) => e)} href='#' className={styles.card} style={{ background: `url(${news_photo || 'banner-logo.svg'}) no-repeat center center / cover, #21242C` }}>
+    <a onClick={preventDefault((e) => e)} href='#' className={styles.card}>
+      <Image
+        className={styles.image}
+        fill
+        loading='lazy'
+        src={news_photo || 'banner-logo.svg'}
+        alt="contacts background image" />
+
       <div className={styles.content}>
         <h4 className={styles.title}>{news_title}</h4>
         <p className={styles.text}>{news_description}</p>

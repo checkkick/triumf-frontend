@@ -51,16 +51,23 @@
 .slide {
    height: 13.75rem;
    background-color: $text-white;
-   background-position: center center;
-   background-size: auto 80%;
-   background-repeat: no-repeat;
    border-radius: 15px;
    display: flex;
    align-items: center;
    justify-content: center;
 }
 
+.bgImage {
+   z-index: -1;
+   position: absolute;
+   object-fit: contain;
+   width: 90%;
+   height: 80%;
+}
+
 .image {
-   width: 100%;
+   object-fit: contain;
+   width: 90%;
+   max-height: 80%;
    margin: 1rem;
 }

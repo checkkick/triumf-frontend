@@ -10,6 +10,7 @@
    border-radius: 5px;
    overflow: hidden;
    outline: none;
+   background-color: $main-black;
 
    &:hover,
    &:active,
@@ -26,6 +27,10 @@
          transform: translateY(3rem);
       }
    }
+}
+
+.image {
+   object-fit: cover;
 }
 
 .logo {

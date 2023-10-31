@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 import React from 'react';
 import styles from './partnersswiper.module.scss';
 import { IPartnersData } from '@/api/getPartnersData';
+import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Scrollbar } from 'swiper/modules';
@@ -39,8 +39,22 @@ export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[]
     >
       {
         partnersData.map((item, index) =>
-          <SwiperSlide key={index} className={styles.slide} style={{ backgroundImage: `url(${item.partners_back_photo})` }}>
-            <img className={styles.image} src={item.partners_front_photo} loading='lazy' alt="partner image" />
+          <SwiperSlide key={index} className={styles.slide}>
+            <Image
+              className={styles.bgImage}
+              width={400}
+              height={400}
+              loading='lazy'
+              src={item.partners_back_photo}
+              alt='partners background photo' />
+
+            <Image
+              className={styles.image}
+              width={400}
+              height={400}
+              loading='lazy'
+              src={item.partners_front_photo}
+              alt="partner image" />
           </SwiperSlide>
         )
       }

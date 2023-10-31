@@ -29,8 +29,8 @@
       top: 0;
       bottom: 0;
       right: 150px;
-      left: 150px;
-      background: url('~/assets/images/company-background.png') no-repeat center / cover;
+      left: 30%;
+      background: url('~/assets/images/company-background.webp') no-repeat center / cover;
 
       @media (max-width: 1150px) {
          right: 30px;
@@ -100,7 +100,7 @@
    max-width: 55%;
    @include defineFontHalvarBreit(300, 1.25rem);
    color: $text-white;
-   margin-bottom: 1.4rem;
+   margin-bottom: 2rem;
 
    @media (max-width: 900px) {
       max-width: none;

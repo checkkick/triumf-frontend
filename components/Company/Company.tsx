@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import styles from './company.module.scss';
 import { DownloadButton } from './DownloadButton';
