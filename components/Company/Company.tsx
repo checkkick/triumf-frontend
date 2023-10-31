@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './company.module.scss';
 import { DownloadButton } from './DownloadButton';
+import Image from 'next/image';
 
 interface ICompanyProps {
   title: string
@@ -20,7 +21,13 @@ export function Company({ title, descriptionTop, descriptionBottom, presentation
           <h3 className={styles.subtitle}>{title}</h3>
         </div>
 
-        <img className={styles.image} loading='lazy' src="/company-mobile.png" alt="company about image" />
+        <Image
+          className={styles.image}
+          width={1000}
+          height={1000}
+          loading='lazy'
+          src="/company-mobile.png"
+          alt="company about image" />
 
         <div className="container">
           <p className={styles.text}>

@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './contacts.module.scss';
 import { ContactsForm } from './ContactsForm';
 import getFooterData from '@/api/getFooterData';
+import Image from 'next/image';
 
 interface IContactsProps {
   title: string
@@ -14,6 +15,14 @@ export async function Contacts({ title }: IContactsProps) {
   return (
     <section className={styles.wrapper}>
       <div id='contacts' className={styles.anchor}></div>
+
+      <Image
+        className={styles.image}
+        fill
+        loading='lazy'
+        src="/contacts-background.png"
+        alt="contacts background image" />
+
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.content}>
