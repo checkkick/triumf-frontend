@@ -14,7 +14,7 @@ interface IEquipmentItem {
 export function EquipmentItem({ image, title, text, price }: IEquipmentItem) {
   return (
     <a href='#' className={styles.item} onClick={preventDefault((e) => e)}>
-      <img className={styles.image} src={image} alt={title} />
+      <img className={styles.image} src={image} alt={title} loading='lazy' />
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.text}>{text}</p>
       <p className={styles.price}>{price}</p>
