@@ -24,7 +24,11 @@ export function EquipmentItem({ image, title, text, price }: IEquipmentItem) {
 
       <h4 className={styles.title}>{title}</h4>
       <p className={styles.text}>{text}</p>
-      <p className={styles.price}>{price}</p>
+      <p
+        onClick={() => document.getElementById('contacts')?.scrollIntoView()}
+        className={styles.price}>
+        {price}
+      </p>
     </a>
   );
 }
