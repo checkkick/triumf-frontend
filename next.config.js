@@ -7,7 +7,11 @@ const nextConfig = {
    },
    output: 'standalone',
    images: {
-      domains: [process.env.NEXT_PUBLIC_DOMAIN],
+      remotePatterns: [
+         {
+            hostname: process.env.NEXT_PUBLIC_DOMAIN,
+         },
+      ],
    },
 }
 
