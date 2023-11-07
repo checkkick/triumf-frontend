@@ -65,6 +65,18 @@
    height: 80%;
 }
 
+.blur {
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   backdrop-filter: blur(2px);
+   background-color: rgba($text-white, 0.6);
+   border-radius: 15px;
+}
+
 .image {
    object-fit: contain;
    width: 90%;

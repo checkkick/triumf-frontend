@@ -44,9 +44,10 @@ export function PartnersSwiper({ partnersData }: { partnersData: IPartnersData[]
               className={styles.bgImage}
               width={400}
               height={400}
-              loading='lazy'
               src={item.partners_back_photo}
               alt='partners background photo' />
+
+            <span className={styles.blur}></span>
 
             <Image
               className={styles.image}
